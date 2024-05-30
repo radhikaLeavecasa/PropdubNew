@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RedHatText-Regular.ttf">
+            <string>RedHatText-Regular</string>
+        </array>
+        <array key="RedHatText-SemiBold.ttf">
+            <string>RedHatText-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeHeaderNewXIB" customModule="PropDub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGM-jZ-rRH">
+                    <rect key="frame" x="303" y="59" width="80" height="759"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="11w-67-RC7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="View All">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eah-bU-GNg">
+                    <rect key="frame" x="20" y="59" width="63" height="759"/>
+                    <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm2-BI-6qc">
+                    <rect key="frame" x="88" y="59" width="63" height="759"/>
+                    <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="15"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.96351343389999999" green="0.96947807070000003" blue="0.98400729890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bGM-jZ-rRH" firstAttribute="top" secondItem="eah-bU-GNg" secondAttribute="top" id="2rd-Tw-6rm"/>
+                <constraint firstItem="Nm2-BI-6qc" firstAttribute="bottom" secondItem="eah-bU-GNg" secondAttribute="bottom" id="32J-ad-h08"/>
+                <constraint firstItem="Nm2-BI-6qc" firstAttribute="leading" secondItem="eah-bU-GNg" secondAttribute="trailing" constant="5" id="40L-gy-6pc"/>
+                <constraint firstItem="eah-bU-GNg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="SwT-BP-pIk"/>
+                <constraint firstItem="eah-bU-GNg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="f75-e0-yCe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bGM-jZ-rRH" secondAttribute="trailing" constant="10" id="fWh-tN-WST"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eah-bU-GNg" secondAttribute="bottom" id="i4c-y7-zIK"/>
+                <constraint firstItem="bGM-jZ-rRH" firstAttribute="centerY" secondItem="Nm2-BI-6qc" secondAttribute="centerY" id="j8w-F0-Bzb"/>
+                <constraint firstItem="Nm2-BI-6qc" firstAttribute="top" secondItem="eah-bU-GNg" secondAttribute="top" id="vq4-sO-iv0"/>
+            </constraints>
+            <connections>
+                <outlet property="lblTitle" destination="eah-bU-GNg" id="3d7-52-qNn"/>
+                <outlet property="lblTitleTwo" destination="Nm2-BI-6qc" id="H8G-hV-4rZ"/>
+                <outlet property="vwAllOne" destination="bGM-jZ-rRH" id="SQw-G8-NDQ"/>
+            </connections>
+            <point key="canvasLocation" x="-161" y="-425"/>
+        </view>
+    </objects>
+</document>
