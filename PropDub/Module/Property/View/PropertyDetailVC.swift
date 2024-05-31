@@ -152,8 +152,8 @@ extension PropertyDetailVC: UITableViewDelegate, UITableViewDataSource {
         if tableView == tblVwAmenities {
             cell.lblOne.text = arrAmenities[indexPath.row].replacingOccurrences(of: "\r", with: "")
         } else if tableView == tblVwLocation {
-            cell.lblOne.text = arrNearByLocation[indexPath.row].components(separatedBy: "- ")[0]
-            cell.lblTwo.text = "- \(arrNearByLocation[indexPath.row].components(separatedBy: "- ")[1])"
+            cell.lblOne.text = arrNearByLocation[indexPath.row].components(separatedBy: "-")[0]
+            cell.lblTwo.text = "- \(arrNearByLocation[indexPath.row].components(separatedBy: "-")[1])"
         } else {
             cell.lblOne.text = arrDetails[indexPath.row]
             cell.lblTwo.text = indexPath.row == 0 ? "- \(propertyDetail?.startingPrice ?? "")" : indexPath.row == 1 ? "- \(propertyDetail?.unit ?? "")" : "- \(propertyDetail?.id ?? 0)"

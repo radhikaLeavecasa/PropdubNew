@@ -8,13 +8,13 @@
 
 import UIKit
 import NVActivityIndicatorView
-//import TTGSnackbar
+import TTGSnackbar
 
 class Proxy: UIViewController, UIPopoverPresentationControllerDelegate  {
     
     static let shared = Proxy()
    
-    //var snackBar : TTGSnackbar?
+    var snackBar : TTGSnackbar?
     var arrDeveloperList: [DeveloperModel]?
     var arrPropertyList: [DataItemModel]?
     
@@ -23,13 +23,13 @@ class Proxy: UIViewController, UIPopoverPresentationControllerDelegate  {
         super.viewDidLoad()
     }
     
-//    func showSnackBar(message: String) {
-//        view.endEditing(true)
-//        snackBar?.dismiss()
-//        snackBar = TTGSnackbar(message: message, duration: .middle)
-//        snackBar?.backgroundColor = UIColor(named: "TEXT_BLACK_COLOR")!
-//        snackBar?.show()
-//    }
+    func showSnackBar(message: String) {
+        view.endEditing(true)
+        snackBar?.dismiss()
+        snackBar = TTGSnackbar(message: message, duration: .middle)
+        snackBar?.backgroundColor = UIColor(named: "APP_BLACK_CLR")!
+        snackBar?.show()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.view.backgroundColor = UIColor.white

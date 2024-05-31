@@ -1,6 +1,7 @@
 PODS:
   - AdvancedPageControl (0.9.0)
   - Alamofire (5.8.1)
+  - DropDown (2.3.13)
   - IQKeyboardManagerSwift (7.0.1)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
@@ -9,36 +10,43 @@ PODS:
   - SDWebImage (5.18.10):
     - SDWebImage/Core (= 5.18.10)
   - SDWebImage/Core (5.18.10)
+  - TTGSnackbar (1.11.1)
   - WARangeSlider (1.2.0)
 
 DEPENDENCIES:
   - AdvancedPageControl
   - Alamofire
+  - DropDown
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
   - ObjectMapper
   - SDWebImage
+  - TTGSnackbar
   - WARangeSlider
 
 SPEC REPOS:
   trunk:
     - AdvancedPageControl
     - Alamofire
+    - DropDown
     - IQKeyboardManagerSwift
     - NVActivityIndicatorView
     - ObjectMapper
     - SDWebImage
+    - TTGSnackbar
     - WARangeSlider
 
 SPEC CHECKSUMS:
   AdvancedPageControl: 39e3b32b00b2d324c534f8e17cc6c5be9abe84b7
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   IQKeyboardManagerSwift: 7f6b1b1d1497855d2beea7f2f10ffcc6978525b1
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   SDWebImage: fc8f2d48bbfd72ef39d70e981bd24a3f3be53fec
+  TTGSnackbar: fea91c62637b5662f808a4c3b55f7631cb7e1ef7
   WARangeSlider: 03f195d4dc5419e6b0d9043cc94fdf418dfe804d
 
-PODFILE CHECKSUM: b353c5481e5671e68b93b4ad2661ab3741be3750
+PODFILE CHECKSUM: 49726fcdf7072bf0e92e981b3ef9cb8690a968c7
 
 COCOAPODS: 1.15.2

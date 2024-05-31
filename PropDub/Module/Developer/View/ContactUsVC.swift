@@ -22,6 +22,9 @@ class ContactUsVC: UIViewController {
     var designation = String()
     var reraNo = String()
     var viewModel = ContactUsVM()
+    
+    typealias filterCompletion = (_ isCompletion: Bool, _ msg: String) -> Void
+    var filterComplDelegate: filterCompletion? = nil
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +34,21 @@ class ContactUsVC: UIViewController {
         lblDesignation.text = designation
     }
     @IBAction func actionBookViewing(_ sender: UIButton) {
-        let param: [String:AnyObject] = [WSRequestParams.WS_REQS_PARAM_NAME : txtFldName.text!,
-                                         WSRequestParams.WS_REQS_PARAM_EMAIL: txtFldEmail.text!,
-                                         WSRequestParams.WS_REQS_PARAM_PHONE: txtFldPhone.text!,
-                                         WSRequestParams.WS_RESP_PARAM_TYPE: sender.tag == 0 ? "Book a Viewing" : "Schedule a call",
-                                         WSResponseParams.WS_RESP_PARAM_MESSAGE : "" as NSString,
-                                         WSRequestParams.WS_REQS_PARAM_JOB_TYPE: "" as NSString,
-                                         WSRequestParams.WS_REQS_PARAM_SOURCE: "" as NSString] as! [String:AnyObject]
-        
-        
-        viewModel.contactUsApi(param: param) { val in
-            if val {
-                self.dismiss(animated: true)
+        if isValidatePassanger() {
+            let param: [String:AnyObject] = [WSRequestParams.WS_REQS_PARAM_NAME : txtFldName.text!,
+                                             WSRequestParams.WS_REQS_PARAM_EMAIL: txtFldEmail.text!,
+                                             WSRequestParams.WS_REQS_PARAM_PHONE: txtFldPhone.text!,
+                                             WSRequestParams.WS_RESP_PARAM_TYPE: sender.tag == 0 ? "Book a Viewing" : "Schedule a call",
+                                             WSResponseParams.WS_RESP_PARAM_MESSAGE : "" as NSString,
+                                             WSRequestParams.WS_REQS_PARAM_JOB_TYPE: "" as NSString,
+                                             WSRequestParams.WS_REQS_PARAM_SOURCE: "" as NSString] as! [String:AnyObject]
+            
+            
+            viewModel.contactUsApi(param: param) { val,msg in
+                self.dismiss(animated: true) {
+                    guard let filter = self.filterComplDelegate else { return }
+                    filter(val,msg)
+                }
             }
         }
     }
@@ -57,19 +63,18 @@ class ContactUsVC: UIViewController {
     //MARK:- Custom methods
     func isValidatePassanger() -> Bool {
         if txtFldName.text?.isEmptyCheck() == true {
-            // pushNoInterConnection(view: self,titleMsg: "Alert", msg: "\(CommonMessage.PLEASE_CHOOSE) pax \(at+1) \(CommonMessage.PLEASE_FILL_TITLE)")
+            Proxy.shared.showSnackBar(message: CommonMessage.ENTER_NAME)
             return false
         } else if txtFldPhone.text?.isEmptyCheck() == true{
-            //pushNoInterConnection(view: self,titleMsg: "Alert", msg: "\(CommonMessage.PLEASE_FILL) pax \(at+1) \(CommonMessage.PLEASE_FILL_DATE_OF_BIRTH)")
+            Proxy.shared.showSnackBar(message: CommonMessage.ENTER_PHONE)
             return false
         } else if txtFldEmail.text?.isEmptyCheck() == true {
-            //  pushNoInterConnection(view: self,titleMsg: "Alert", msg: "\(CommonMessage.PLEASE_FILL) pax \(at+1) \(CommonMessage.PLEASE_FILL_EMAIL)")
+            Proxy.shared.showSnackBar(message: CommonMessage.ENTER_EMAIL)
             return false
-        }else if txtFldEmail.text?.isValidEmail() == false {
-            //  pushNoInterConnection(view: self,titleMsg: "Alert", msg: "\(CommonMessage.PLEASE_FILL) pax \(at+1) \(CommonMessage.PLEASE_FILL_VALID_EMAIL)")
+        } else if txtFldEmail.text?.isValidEmail() == false {
+            Proxy.shared.showSnackBar(message: CommonMessage.ENTER_VALID_EMAIL)
             return false
         }
-        
         return true
     }
 }

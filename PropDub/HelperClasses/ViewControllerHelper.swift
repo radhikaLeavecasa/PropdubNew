@@ -23,6 +23,7 @@ enum ViewControllerType : String{
     case PropertyDetailVC
     case FilterVC
     case ContactUsVC
+    case AlertPopUpVC
     
 }
 

@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import DropDown
 
 class PropertyListVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var cnstCollVwLocation: NSLayoutConstraint!
+    @IBOutlet weak var collVwLocations: UICollectionView!
     @IBOutlet weak var lblPropertyType: UILabel!
     @IBOutlet weak var txtFldSearch: UITextField!
     @IBOutlet weak var collVwPropertyList: UICollectionView!
     //MARK: - Variables
     var type = Int()
+    let dropDown = DropDown()
     var arrProperty = [DataItemModel]()
     var filterArr = [DataItemModel]()
     var minValue = 0
@@ -21,6 +25,10 @@ class PropertyListVC: UIViewController {
     var arrFilteredAmenities = [String]()
     var arrFilteredConfiguration = [String]()
     var image = UIImage()
+    var arrLocation = [String]()
+    var arrSelectedLocation = [String]()
+    var isFilter = false
+    var arrFilteredName = [String]()
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +50,16 @@ class PropertyListVC: UIViewController {
             lblPropertyType.text = "All Properties"
             arrProperty = Proxy.shared.arrPropertyList ?? []
         }
+        
+        for i in Proxy.shared.arrPropertyList ?? [] {
+            if let location = i.location, !location.isEmpty {
+                arrLocation.append(location)
+            }
+        }
+
+        let uniqueLocations = Array(Set(arrLocation))
+        arrLocation = uniqueLocations
+        
         filterArr = arrProperty
         collVwPropertyList.reloadData()
     }
@@ -70,16 +88,28 @@ class PropertyListVC: UIViewController {
             vc.maxValue = self.maxValue
             vc.selectedAmenity = self.arrFilteredAmenities
             vc.selectedConf = self.arrFilteredConfiguration
+            var arrName = [String]()
+            for i in filterArr {
+                arrName.append(i.name ?? "")
+            }
+            
+            var uniqueItems = Set<String>()
+            
+            for item in arrName {
+                uniqueItems.insert(item)
+            }
+            arrName = Array(uniqueItems)
+            vc.arrName = arrName
             
             vc.filterComplDelegate = {
-                minVal,maxVal,arrAmenity,arrConf,isClear in
+                minVal,maxVal,arrAmenity,arrConf,isClear, arrSelectedNames in
                 
                 self.minValue = minVal
                 self.maxValue = maxVal
                 self.arrFilteredAmenities = arrAmenity
                 self.arrFilteredConfiguration = arrConf
-                
-                self.filterData(minVal: minVal, maxVal: maxVal, arrAmenity: arrAmenity, arrConf: arrConf,isClear: isClear)
+                self.arrFilteredName = arrSelectedNames
+                self.filterData(minVal: minVal, maxVal: maxVal, arrAmenity: arrAmenity, arrConf: arrConf,isClear: isClear, arrSelectedNames: arrSelectedNames)
             }
             self.present(vc, animated: true)
         }
@@ -92,8 +122,9 @@ class PropertyListVC: UIViewController {
             return 0
         }
     }
-    func filterData(minVal:Int,maxVal:Int,arrAmenity:[String],arrConf:[String],isClear:Bool){
+    func filterData(minVal:Int,maxVal:Int,arrAmenity:[String],arrConf:[String],isClear:Bool, arrSelectedNames:[String]){
         if !isClear {
+            isFilter = true
             //Filter Amenities
             if arrAmenity.count > 0 {
                 var halfCount = 0
@@ -161,6 +192,24 @@ class PropertyListVC: UIViewController {
                     return false
                 }
             }
+            
+            for i in arrSelectedLocation {
+                for j in arrProperty {
+                    if j.location?.contains(i) == true {
+                        filterArr.append(j)
+                    }
+                }
+            }
+            
+            for i in arrSelectedNames {
+                for j in arrProperty {
+                    if j.name?.contains(i) == true {
+                        self.filterArr.append(j)
+                    }
+                }
+            }
+            
+            
             var uniqueItems = Set<DataItemModel>()
             
             for item in filterArr {
@@ -168,6 +217,7 @@ class PropertyListVC: UIViewController {
             }
             filterArr = Array(uniqueItems)
         } else {
+            isFilter = false
             filterArr = arrProperty
         }
         collVwPropertyList.reloadData()
@@ -199,32 +249,50 @@ class PropertyListVC: UIViewController {
 
 extension PropertyListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        filterArr.count
+        collectionView == collVwLocations ? arrSelectedLocation.count : filterArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExclusiveCVC", for: indexPath) as! ExclusiveCVC
-        cell.lblName.text = filterArr[indexPath.row].location
-        cell.lblLocation.text = filterArr[indexPath.row].unit
-        cell.lblPrice.text = filterArr[indexPath.row].startingPrice
-        cell.imgVwSymbol.sd_setImage(with: URL(string: "\(imageBaseUrl)\(filterArr[indexPath.row].logo ?? "")"), placeholderImage: .placeholderImage())
-        cell.imgVwSymbol.isHidden = false
-        cell.constHeightPropertyList.constant = 40
-        cell.imgVwProperty.sd_setImage(with: URL(string: "\(imageBaseUrl)\(filterArr[indexPath.row].image ?? "")"), placeholderImage: .placeholderImage())
-        cell.btnContactUs.tag = indexPath.row
-        cell.btnContactUs.addTarget(self, action: #selector(actionContactUs), for: .touchUpInside)
-        return cell
+        if collectionView == collVwLocations {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContactOptionsCVC", for: indexPath) as! ContactOptionsCVC
+            cell.lblTitle.text = arrSelectedLocation[indexPath.row]
+            cell.btnCheck.tag = indexPath.row
+            cell.btnCheck.addTarget(self, action: #selector(actionCross), for: .touchUpInside)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExclusiveCVC", for: indexPath) as! ExclusiveCVC
+            cell.lblName.text = filterArr[indexPath.row].location
+            cell.lblLocation.text = filterArr[indexPath.row].unit
+            cell.lblPrice.text = filterArr[indexPath.row].startingPrice
+            cell.imgVwSymbol.sd_setImage(with: URL(string: "\(imageBaseUrl)\(filterArr[indexPath.row].logo ?? "")"), placeholderImage: .placeholderImage())
+            cell.imgVwSymbol.isHidden = false
+            cell.constHeightPropertyList.constant = 40
+            cell.imgVwProperty.sd_setImage(with: URL(string: "\(imageBaseUrl)\(filterArr[indexPath.row].image ?? "")"), placeholderImage: .placeholderImage())
+            cell.btnContactUs.tag = indexPath.row
+            cell.btnContactUs.addTarget(self, action: #selector(actionContactUs), for: .touchUpInside)
+            return cell
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collVwPropertyList.frame.size.width, height: 360)
+        if collectionView == collVwLocations {
+            let label = UILabel(frame: CGRect.zero)
+            label.text = arrSelectedLocation[indexPath.item]
+            label.sizeToFit()
+            return CGSize(width: label.frame.width+15, height: self.collVwLocations.frame.size.height)
+        } else {
+            return CGSize(width: self.collVwPropertyList.frame.size.width, height: 360)
+        }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .PropertyDetailVC, StoryboardName: .Main) as? PropertyDetailVC {
-            vc.propertyDetail = filterArr[indexPath.row]
-            self.pushView(vc: vc)
+        if collectionView != collVwLocations {
+            if let vc = ViewControllerHelper.getViewController(ofType: .PropertyDetailVC, StoryboardName: .Main) as? PropertyDetailVC {
+                vc.propertyDetail = filterArr[indexPath.row]
+                self.pushView(vc: vc)
+            }
         }
     }
     @objc func actionContactUs(_ sender: UIButton) {
+        
         if let vc = ViewControllerHelper.getViewController(ofType: .ContactUsVC, StoryboardName: .Main) as? ContactUsVC {
             vc.name = filterArr[sender.tag].agent?.name ?? ""
             vc.image = filterArr[sender.tag].agent?.images ?? ""
@@ -232,17 +300,106 @@ extension PropertyListVC: UICollectionViewDelegate, UICollectionViewDataSource, 
             vc.modalPresentationStyle = .overFullScreen
             vc.modalTransitionStyle = .crossDissolve
             //vc.reraNo = filterArr[sender.tag].agent?.dldPermitNumber
+            
+            vc.filterComplDelegate = {
+                val, msg in
+                if let vc2 = ViewControllerHelper.getViewController(ofType: .AlertPopUpVC, StoryboardName: .Main) as? AlertPopUpVC {
+                    vc2.modalPresentationStyle = .overFullScreen
+                    vc2.modalTransitionStyle = .crossDissolve
+                    if val {
+                        vc2.titleStr = CommonMessage.CONFIRMATION_MSG
+                        vc2.descrp = CommonMessage.THANK_FOR_REACHING
+                    } else {
+                        if msg == CommonError.INTERNET {
+                            vc2.titleStr = CommonMessage.NO_INTERNET_CONNECTION
+                            vc2.descrp = CommonMessage.INTERNET_RETRY
+                        } else {
+                            vc2.titleStr = CommonMessage.ALERT
+                            vc2.descrp = msg
+                        }
+                    }
+                    self.present(vc2, animated: true)
+                }
+            }
             self.present(vc, animated: true)
         }
+    }
+    @objc func actionCross(_ sender: UIButton) {
+        self.arrSelectedLocation.remove(at: sender.tag)
+        if arrSelectedLocation.count == 0 {
+            cnstCollVwLocation.constant = 0
+            filterArr = arrProperty
+        }
+        
+        if !isFilter {
+            filterArr = []
+        }
+        for i in arrSelectedLocation {
+            for j in arrProperty {
+                if j.location?.contains(i) == true {
+                    filterArr.append(j)
+                }
+            }
+        }
+        var uniqueItems = Set<DataItemModel>()
+        
+        for item in filterArr {
+            uniqueItems.insert(item)
+        }
+        filterArr = Array(uniqueItems)
+        
+        collVwPropertyList.reloadData()
+        collVwLocations.reloadData()
     }
 }
 
 
-//extension PropertyListVC: UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+extension PropertyListVC: UITextFieldDelegate{ //UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        self.showShortDropDown(textFeild: textField, data: arrLocation)
 //        let _ = ImagePickerManager().pickImage(self) { img in
 //            self.image = img
 //        }
-//        return false
-//    }
-//}
+        return false
+    }
+    
+    func showShortDropDown(textFeild:UITextField,data:[String]){
+        DispatchQueue.main.async {
+            textFeild.resignFirstResponder()
+            
+            self.dropDown.anchorView = textFeild.plainView
+            self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
+            
+            self.dropDown.dataSource = data
+            
+            self.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                if !arrSelectedLocation.contains(item) {
+                    arrSelectedLocation.append(item)
+                    if !isFilter {
+                        filterArr = []
+                    }
+                    for i in arrSelectedLocation {
+                        for j in arrProperty {
+                            if j.location?.contains(i) == true {
+                                filterArr.append(j)
+                            }
+                        }
+                    }
+                    var uniqueItems = Set<DataItemModel>()
+                    
+                    for item in filterArr {
+                        uniqueItems.insert(item)
+                    }
+                    filterArr = Array(uniqueItems)
+                    
+                    collVwLocations.reloadData()
+                    collVwPropertyList.reloadData()
+                }
+                if arrSelectedLocation.count > 0 {
+                    cnstCollVwLocation.constant = 55
+                }
+            }
+            self.dropDown.show()
+        }
+    }
+}
