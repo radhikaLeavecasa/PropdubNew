@@ -10,6 +10,7 @@ pod 'WARangeSlider'
 pod 'AdvancedPageControl'
 pod 'TTGSnackbar'
 pod 'DropDown'
+pod 'OTPFieldView'
 
 target 'PropDub' do
   # Comment the next line if you don't want to use dynamic frameworks

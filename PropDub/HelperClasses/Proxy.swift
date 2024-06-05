@@ -10,14 +10,13 @@ import UIKit
 import NVActivityIndicatorView
 import TTGSnackbar
 
-class Proxy: UIViewController, UIPopoverPresentationControllerDelegate  {
+class Proxy: UIViewController, UIPopoverPresentationControllerDelegate, NVActivityIndicatorViewable  {
     
     static let shared = Proxy()
    
     var snackBar : TTGSnackbar?
     var arrDeveloperList: [DeveloperModel]?
     var arrPropertyList: [DataItemModel]?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,36 +40,12 @@ class Proxy: UIViewController, UIPopoverPresentationControllerDelegate  {
         dateFormatter.dateFormat = getFormat
         return dateFormatter.string(from: date)
     }
-    func loadAnimation(show: Bool) {
-        var activityIndicator: NVActivityIndicatorView!
-
-        // Ensure correct calculation of center coordinates
-        let xAxis = view.bounds.midX
-        let yAxis = view.bounds.midY
-
-        // Define frame size with proper width and height
-        let size = CGRect(x: xAxis - 30, y: yAxis - 30, width: 60, height: 60)
-
-        // Create NVActivityIndicatorView instance
-        activityIndicator = NVActivityIndicatorView(frame: size)
-        activityIndicator.type = .lineSpinFadeLoader // Set loader type
-        activityIndicator.color = .black.withAlphaComponent(0.2) // Set loader color
-
-        if show {
-            // Start animating and add to the view
-            activityIndicator.startAnimating()
-            view.addSubview(activityIndicator)
-        } else {
-            // Stop animating and remove from the view
-            activityIndicator.stopAnimating()
-            activityIndicator.removeFromSuperview()
-        }
-    
-        //        self.startAnimating(CGSize(width: 60, height: 60), message:"", messageFont: UIFont(name: "Montserrat Regular",size: 12.0), type: .lineSpinFadeLoader, color: .lightBlue(), padding: 5, displayTimeThreshold: 5, minimumDisplayTime: 5, backgroundColor: .black.withAlphaComponent(0.2), textColor: .darkGray, fadeInAnimation: nil)
+    func loadAnimation() {
+        self.startAnimating(CGSize(width: 60, height: 60), message:"", messageFont: UIFont(name: "RedHatText-Regular",size: 13.0), type: .ballSpinFadeLoader, color: .APP_BLACK_CLR, padding: 5, displayTimeThreshold: 5, minimumDisplayTime: 5, backgroundColor: .black.withAlphaComponent(0.2), textColor: .darkGray, fadeInAnimation: nil)
     }
-    //    func stopAnimation(){
-    //        self.stopAnimating()
-    //    }
+    func stopAnimation(){
+        self.stopAnimating()
+    }
     
     func calculateAge(from dateString: String) -> Int? {
         let dateFormatter = DateFormatter()

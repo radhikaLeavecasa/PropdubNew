@@ -144,67 +144,6 @@ struct CommonMessage {
     static let ENTER_VALID_EMAIL = "Please enter valid email"
 //    static let PROFILE_UPDATE_SUCCESS = "Profile updated successfully!"
     
-
-//    
-////    static let FROM_SELECT = "select_from"
-////    static let TO_SELECT = "select_from"
-//    static let PROFILE_COMPELET = "Please Complete Your Profile"
-//    static let GST = "Please enter GST number"
-//    static let VALID_GST = "Please enter valid GST number"
-//    
-//    static let COMPANY_NAME = "Please enter company name"
-//    static let COMPANY_ADDRESS = "Please enter company address"
-//    static let VALID_COMPANY_EMAIL = "Please enter valid company email"
-//    static let COMPANY_EMAIL = "Please enter company email"
-//    static let COMPANY_PHONE = "Please enter company phone"
-//    
-//    static let BOOKING_FOR = "Please select book for"
-//    static let ENTER_COMPANY_NAME = "Please select book for"
-//    
-//    static let FULL_NAME = "Please enter full name"
-//    static let CITY = "Please select valid city from dropdown list"
-//    static let ENTER_OTP = "Please Enter Valid OTP"
-//  //  static let ENTER_SUPPORT_MESSAGE = "enter_support_message"
-// //   static let TWILLIO_ERROR = "twilio_error"
-//    static let ENTER_COUPON_CODE = "Enter coupon code"
-//   // static let INSURANCE_IMAGE = "insurance_image"
-// //  static let INSURANCE_NUMBER = "insurance_number".localized()
-//    static let LOGOUT = "Are you sure want to logout?"
-//    static let MOBILE = "Please Enter Phone Number"
-//    static let ACCEPT_TERMS = "Please accept terms and conditions"
-//    static let VALID_MOBILE = "Please enter valid phone number"
-//  //  static let USER_NAME = "enter_user_name".localized()
-//    static let INVALID_OTP = "Please enter Valid OTP"
-//    static let EMAIL_ENTER = "Please enter Email"
-//    //static let USER_ADDRESS = "enter_address".localized()
-//   // static let GENDER = "enter_gender".localized()
-//   // static let DOB = "enter_dob".localized()
-//    static let VALID_EMAIL = "Please enter valid email"
-//    static let SELECT_CONSULT = "Please select type of consulation"
-//    static let SELECT_SLOT = "Please select time slot"
-//    static let SELECT_CLINIC = "Please select clinic"
-//    static let CARD_EMPTY = "Card Number field must not be empty!"
-//    static let CARD_INVALID = "Card Number is invalid!"
-//    static let CARD_MONTH = "MM/YY field must not be empty!"
-//    static let CARD_MONTH_VALID = "MM/YY field must be valid!"
-//    static let CARD_CVV = "CVV field must not be empty!"
-//    static let CARD_CVV_VALID = "CVV field must be valid!"
-//    static let INVALID_CARD = "Invalid Cards Details"
-//    static let CARD_INFO = "Card Number field must not be empty!"
-//    static let BOOKING_SUCCESS = "Booking Confirmed"
-//    static let CARD_SELECTION = "Please select cart for payment"
-//    static let SELECT_TITLE = "Please enter title"
-//    static let SELECT_TITLE_10_DIGIT = "Please enter title more than 10 digit"
-//    static let SELECT_PROBLEM = "Please select problem"
-//    static let ENTER_DESCRPTIONS = "Please type descrptions"
-//    static let RECORD_SUBMITED = "Record submitted successfully"
-//    static let ANNIVERSARY_DATE = "ANNIVERSARY DATE"
-//    static let MERITIAL_STATUS = "Please enter marital status"
-//    static let NATIONALITY = "Nationality"
-//    static let FROM_CITY = "Please select valid destination from dropdown list"
-//    static let SOURCE_CITY = "Please select valid source from dropdown list"
-//    static let LEAVING_LOCATION = "Please enter leaving location"
-//    static let DESTINATION_LOCATION = "Please select valid destination from dropdown list"
 }
 
 
@@ -252,6 +191,7 @@ struct WSRequestParams {
     static let WS_REQS_PARAM_JOB_TYPE                  = "job_type"
     static let WS_REQS_PARAM_EMAIL                     = "email"
     static let WS_REQS_PARAM_SOURCE                    = "source"
+    static let WS_REQS_PARAM_OTP                       = "otp"
 //    static let WS_REQS_PARAM_FFAIRLINECODE           = "FFAirlineCode"
 //    static let WS_REQS_PARAM_DEBIT_AMOUNT            = "debit_amount"
 //    static let WS_REQS_PARAM_FFNUMBER                = "FFNumber"

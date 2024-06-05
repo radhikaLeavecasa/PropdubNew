@@ -33,4 +33,9 @@ extension DeveloperVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: collVwDevelopers.frame.size.width, height: 170)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ViewControllerHelper.getViewController(ofType: .DeveloperDetailVC, StoryboardName: .Main) as! DeveloperDetailVC
+        vc.developerDetail = Proxy.shared.arrDeveloperList?[indexPath.row]
+        self.pushView(vc: vc)
+    }
 }

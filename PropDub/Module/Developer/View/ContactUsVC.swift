@@ -60,7 +60,7 @@ class ContactUsVC: UIViewController {
     @IBAction func actionCross(_ sender: Any) {
         dismiss(animated: true)
     }
-    //MARK:- Custom methods
+    //MARK: - Custom methods
     func isValidatePassanger() -> Bool {
         if txtFldName.text?.isEmptyCheck() == true {
             Proxy.shared.showSnackBar(message: CommonMessage.ENTER_NAME)

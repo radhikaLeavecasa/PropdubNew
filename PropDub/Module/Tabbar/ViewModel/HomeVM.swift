@@ -17,9 +17,9 @@ class HomeVM: NSObject {
     var arrTrendingList = [DataItemModel]()
     
     func getHomeApi(_ completion: @escaping() -> Void) {
-        Proxy.shared.loadAnimation(show: true)
+        Proxy.shared.loadAnimation()
         WebService.callApi(api: .homeApi, method: .get, param: [:], header: true) { status, msg, response in
-            Proxy.shared.loadAnimation(show: false)
+            Proxy.shared.stopAnimation()
             if status == true {
                 if let data = response as? [String:Any] {
                     let homeData = HomeModel(JSON: data)
@@ -44,9 +44,9 @@ class HomeVM: NSObject {
     }
     
     func developerHomeApi(_ completion: @escaping() -> Void) {
-        Proxy.shared.loadAnimation(show: true)
+        Proxy.shared.loadAnimation()
         WebService.callApi(api: .developerApi, method: .get, param: [:], header: true) { status, msg, response in
-            Proxy.shared.loadAnimation(show: false)
+            Proxy.shared.stopAnimation()
             if status == true {
                 if let data = response as? [String:Any] {
                     let responseModel = Mapper<HomeModel>().map(JSON: data)

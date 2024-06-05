@@ -24,6 +24,11 @@ enum ViewControllerType : String{
     case FilterVC
     case ContactUsVC
     case AlertPopUpVC
+    case DeveloperDetailVC
+    case AboutUsVC
+    case ProfileVC
+    case LoginVC
+    case OtpVC
     
 }
 

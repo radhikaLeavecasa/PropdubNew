@@ -22,6 +22,9 @@ enum Api: Equatable {
     case developerApi
     case saveSuperAgent
     case contactAgent
+    case userLogin
+    case verifyUserLogin
+    case superAgentLogin
     
     func rawValued() -> String {
         switch self {
@@ -33,6 +36,12 @@ enum Api: Equatable {
             return "save-super-agent"
         case .contactAgent:
             return "contact"
+        case .userLogin:
+            return "send-otp"
+        case .verifyUserLogin:
+            return "verify-user-otp"
+        case .superAgentLogin:
+            return "send-user-otp"
         }
     }
 }

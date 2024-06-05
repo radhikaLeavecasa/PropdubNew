@@ -61,6 +61,10 @@ class HomeVC: UIViewController {
             }
         }
     }
+    @IBAction func actionProfile(_ sender: Any) {
+        let vc = ViewControllerHelper.getViewController(ofType: .ProfileVC, StoryboardName: .Main) as! ProfileVC
+        self.pushView(vc: vc)
+    }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {

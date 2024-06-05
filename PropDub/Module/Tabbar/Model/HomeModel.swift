@@ -153,8 +153,8 @@ struct DeveloperModel: Mappable {
     var content: String?
     var createdAt: String?
     var emp: String?
-    var estb: Int?
-    var exp: Int?
+    var estb: String?
+    var exp: String?
     var fHeading: String?
     var fImg: String?
     var fSubHeading: String?
