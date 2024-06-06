@@ -16,6 +16,7 @@ class OtpVC: UIViewController {
     var isOtpComplete = false
     var viewModel = OtpVM()
     var email = String()
+    var type = Int()
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +37,9 @@ class OtpVC: UIViewController {
 //                    self.setView(vc: vc)
                 } else {
                     if msg == CommonError.INTERNET {
-                        Proxy.shared.showSnackBar(message: CommonMessage.NO_INTERNET_CONNECTION)
+                        Proxy.shared.presentAlert(CommonMessage.NO_INTERNET_CONNECTION,titleMsg: "Oops!", vc: self)
                     } else {
-                        Proxy.shared.showSnackBar(message: msg)
+                        Proxy.shared.presentAlert(msg,titleMsg: "Oops!", vc: self)
                     }
                 }
             }
@@ -47,7 +48,7 @@ class OtpVC: UIViewController {
     //MARK: - Custom method
     func setupOtpView(){
         self.vwOtp.fieldsCount = 4
-        self.vwOtp.fieldBorderWidth = 2
+        self.vwOtp.fieldBorderWidth = 1.5
         self.vwOtp.filledBackgroundColor = .clear
         self.vwOtp.defaultBackgroundColor = .clear
         self.vwOtp.defaultBorderColor = .APP_BLACK_CLR

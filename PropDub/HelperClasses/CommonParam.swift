@@ -139,11 +139,17 @@ struct CommonMessage {
     static let INTERNET_RETRY = "Please retry internet connection not available"
     static let ALERT = "Alert!"
     static let ENTER_NAME = "Please enter full name"
+    static let ENTER_NAME_TWO = "Please enter full name"
     static let ENTER_PHONE = "Please enter phone"
+    static let ENTER_MOBILE = "Please enter mobile no."
     static let ENTER_EMAIL = "Please enter email"
     static let ENTER_VALID_EMAIL = "Please enter valid email"
-//    static let PROFILE_UPDATE_SUCCESS = "Profile updated successfully!"
-    
+    static let ENTER_PASSWORD = "Please enter password"
+    static let ENTER_LOCATION = "Please enter location"
+    static let UPLOAD_PASSPORT_PHOTO = "Please upload passport photo"
+    static let UPLOAD_AADHAR_CARD1 = "Please upload aadhar card front photo"
+    static let UPLOAD_AADHAR_CARD2 = "Please upload aadhar card back photo"
+    static let ENTER_DESCRP = "Please enter description"
 }
 
 
@@ -187,12 +193,17 @@ struct Strings {
 
 
 struct WSRequestParams {
+    static let WS_REQS_PARAM_AADHAR_ONE                = "aadhar1"
+    static let WS_REQS_PARAM_AADHAR_TWO                = "aadhar2"
+    static let WS_REQS_PARAM_PASSPORT                  = "passport"
+    static let WS_REQS_PARAM_DESCRIPTION               = "description"
     static let WS_REQS_PARAM_PHONE                     = "phone"
+    static let WS_REQS_PARAM_MOBILE                    = "mobile"
     static let WS_REQS_PARAM_JOB_TYPE                  = "job_type"
     static let WS_REQS_PARAM_EMAIL                     = "email"
     static let WS_REQS_PARAM_SOURCE                    = "source"
     static let WS_REQS_PARAM_OTP                       = "otp"
-//    static let WS_REQS_PARAM_FFAIRLINECODE           = "FFAirlineCode"
+    static let WS_REQS_PARAM_PASSWORD                  = "password"
 //    static let WS_REQS_PARAM_DEBIT_AMOUNT            = "debit_amount"
 //    static let WS_REQS_PARAM_FFNUMBER                = "FFNumber"
 //    static let WS_REQS_PARAM_PAYMENT_ARRAY           = "payment_array"

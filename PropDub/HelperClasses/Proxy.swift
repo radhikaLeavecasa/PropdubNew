@@ -47,6 +47,16 @@ class Proxy: UIViewController, UIPopoverPresentationControllerDelegate, NVActivi
         self.stopAnimating()
     }
     
+    func presentAlert(_ msg: String, titleMsg: String = "", vc:UIViewController){
+        if let vc2 = ViewControllerHelper.getViewController(ofType: .AlertPopUpVC, StoryboardName: .Main) as? AlertPopUpVC {
+            vc2.modalPresentationStyle = .overFullScreen
+            vc2.modalTransitionStyle = .crossDissolve
+            vc2.titleStr = titleMsg
+            vc2.descrp = msg
+            vc.present(vc2, animated: true)
+        }
+    }
+    
     func calculateAge(from dateString: String) -> Int? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"

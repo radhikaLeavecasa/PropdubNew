@@ -33,9 +33,9 @@ class BecomeAgentVC: UIViewController {
                     Proxy.shared.showSnackBar(message: msg)
                 } else {
                     if msg == CommonError.INTERNET {
-                        Proxy.shared.showSnackBar(message: CommonMessage.NO_INTERNET_CONNECTION)
+                        Proxy.shared.presentAlert(CommonMessage.NO_INTERNET_CONNECTION,titleMsg: "Oops", vc: self)
                     } else {
-                        Proxy.shared.showSnackBar(message: msg)
+                        Proxy.shared.presentAlert(msg,titleMsg: "Oops", vc: self)
                     }
                 }
             })

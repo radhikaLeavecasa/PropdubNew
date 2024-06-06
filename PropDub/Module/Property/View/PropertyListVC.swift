@@ -69,17 +69,6 @@ class PropertyListVC: UIViewController {
     }
     @IBAction func actionFilter(_ sender: Any) {
         
-//        var params: [String: AnyObject] = ["name": "Radhika",
-//                                            "email": "radhika@leavecasa.com",
-//                                            "mobile": "9041723151",
-//                                            "description": "sdfsdg"] as! [String: AnyObject]
-//                                          
-//        var imgParam: [String: UIImage] = ["aadhar1": image,
-//                                           "aadhar2": image,
-//                                           "passport": image]
-//        
-//        
-//        self.callEditProfile(param: params, dictImage: imgParam)
         if let vc = ViewControllerHelper.getViewController(ofType: .FilterVC, StoryboardName: .Main) as? FilterVC {
             vc.modalPresentationStyle = .overFullScreen
             vc.modalTransitionStyle = .crossDissolve
@@ -222,29 +211,6 @@ class PropertyListVC: UIViewController {
         }
         collVwPropertyList.reloadData()
     }
-    
-    
-//    func callEditProfile(param:[String:Any],dictImage: [String: UIImage]){
-//        Proxy.shared.loadAnimation(show: true)
-//        WebService.uploadImageWithURL(api: .saveSuperAgent, dictImage: dictImage, parameter: param) { status, msg, response in
-//            
-//            Proxy.shared.loadAnimation(show: false)
-//            if status {
-//                let responseData = response as? [String:Any] ?? [:]
-//                //                if let data = responseData[CommonParam.DATA] as? [String:Any]{
-//                //                    Cookies.userInfoSave(dict: data)
-//                //                }
-//                // self.delegate?.onSuccess()
-//            }else{
-//                if msg == CommonError.INTERNET{
-//                    //  view.pushNoInterConnection(view: view)
-//                }else{
-//                    Proxy.shared.loadAnimation(show: false)
-//                    //self.pushNoInterConnection(view: view,titleMsg: "Alert", msg: msg)
-//                }
-//            }
-//        }
-//    }
 }
 
 extension PropertyListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -354,12 +320,9 @@ extension PropertyListVC: UICollectionViewDelegate, UICollectionViewDataSource, 
 }
 
 
-extension PropertyListVC: UITextFieldDelegate{ //UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+extension PropertyListVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         self.showShortDropDown(textFeild: textField, data: arrLocation)
-//        let _ = ImagePickerManager().pickImage(self) { img in
-//            self.image = img
-//        }
         return false
     }
     

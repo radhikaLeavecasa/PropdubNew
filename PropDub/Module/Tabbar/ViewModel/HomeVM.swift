@@ -28,7 +28,7 @@ class HomeVM: NSObject {
                         if ((i.type?.range(of: "featured", options: .caseInsensitive)) != nil) {
                             self.arrPremiumList.append(i)
                         } 
-                        if (i.cat!.contains("Fresh Finds")) || (i.type!.contains("Fresh Finds")) {
+                        if ((i.type?.range(of: "Fresh Finds", options: .caseInsensitive)) != nil) || ((i.cat?.range(of: "Fresh Finds", options: .caseInsensitive)) != nil) {
                             self.arrFreshFinds.append(i)
                         } 
                         if (i.type?.range(of: "Hot Selling", options: .caseInsensitive) != nil) {
