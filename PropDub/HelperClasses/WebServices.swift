@@ -249,5 +249,4 @@ struct WebService{
             }
         }
     }
-    
 }

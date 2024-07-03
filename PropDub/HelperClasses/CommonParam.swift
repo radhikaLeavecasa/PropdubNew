@@ -150,10 +150,12 @@ struct CommonMessage {
     static let UPLOAD_AADHAR_CARD1 = "Please upload aadhar card front photo"
     static let UPLOAD_AADHAR_CARD2 = "Please upload aadhar card back photo"
     static let ENTER_DESCRP = "Please enter description"
+    static let CONTACT_MSG = "We have received your information and will be in touch with you soon. Thank you for reaching out to us."
+    static let OOPS = "Oops!"
 }
 
 
-struct AlertKeys{
+struct AlertKeys {
 //    static let YES = "YES"
 //    static let NO = "NO"
 //    static let OK = "Ok"
@@ -164,7 +166,7 @@ struct AlertKeys{
 
 // Strings
 struct Strings {
-//    static let Non_Refundable               = "Non-Refundable"
+    static let REQUEST_CALL_BACK              = "Request To Call Back"
 //    static let TIME_REMAINING               = "Time remaining"
 //    static let phone_number                 = "Phone Number"
 //    static let BOOKING_ID                   = "Booking ID"

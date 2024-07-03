@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -35,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="-68" y="-27"/>
         </scene>
-        <!--Become Super AgentVC-->
+        <!--Add PropertyVC-->
         <scene sceneID="03p-PY-k4x">
             <objects>
-                <viewController storyboardIdentifier="BecomeSuperAgentVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NgL-VB-5S9" customClass="BecomeSuperAgentVC" customModule="PropDub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPropertyVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NgL-VB-5S9" customClass="AddPropertyVC" customModule="PropDub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BDs-BQ-aON">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,9 +80,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="ABm-JH-E8r"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boX-Oj-6MH">
                                                                                 <rect key="frame" x="278" y="8.3333333333333428" width="20" height="20"/>
@@ -91,9 +89,6 @@
                                                                                 </constraints>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_dropDown"/>
-                                                                                <connections>
-                                                                                    <action selector="actionUploadImg:" destination="NgL-VB-5S9" eventType="touchUpInside" id="gfN-jI-bLC"/>
-                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,9 +142,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="xKq-JL-BR0"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INe-LH-8Jy">
                                                                                 <rect key="frame" x="278" y="8.3333333333333144" width="20" height="20"/>
@@ -159,9 +151,6 @@
                                                                                 </constraints>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_dropDown"/>
-                                                                                <connections>
-                                                                                    <action selector="actionUploadImg:" destination="NgL-VB-5S9" eventType="touchUpInside" id="Ard-1R-HbP"/>
-                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,9 +204,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="ZUG-Dk-91D"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1g-kw-D4z">
                                                                                 <rect key="frame" x="278" y="8.3333333333333144" width="20" height="20"/>
@@ -227,9 +213,6 @@
                                                                                 </constraints>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_dropDown"/>
-                                                                                <connections>
-                                                                                    <action selector="actionUploadImg:" destination="NgL-VB-5S9" eventType="touchUpInside" id="BJT-6S-c6N"/>
-                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -283,9 +266,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="VCL-Td-YP6"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7k-Zc-mcL">
                                                                                 <rect key="frame" x="278" y="8.3333333333333144" width="20" height="20"/>
@@ -295,9 +275,6 @@
                                                                                 </constraints>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_dropDown"/>
-                                                                                <connections>
-                                                                                    <action selector="actionUploadImg:" destination="NgL-VB-5S9" eventType="touchUpInside" id="9f5-bA-3Ue"/>
-                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -351,9 +328,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="oeg-sA-Ehp"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCI-Hj-qr5">
                                                                                 <rect key="frame" x="278" y="8.3333333333333144" width="20" height="20"/>
@@ -363,9 +337,6 @@
                                                                                 </constraints>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_dropDown"/>
-                                                                                <connections>
-                                                                                    <action selector="actionUploadImg:" destination="NgL-VB-5S9" eventType="touchUpInside" id="Ivm-gv-m8z"/>
-                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -419,9 +390,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="Kuo-1R-MrP"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -473,9 +441,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="rTN-me-f1M"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -527,9 +492,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="NgL-VB-5S9" id="cj1-28-MPX"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -590,9 +552,6 @@
                                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                         <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="15"/>
                                                                                         <textInputTraits key="textInputTraits"/>
-                                                                                        <connections>
-                                                                                            <outlet property="delegate" destination="NgL-VB-5S9" id="54h-sb-3k3"/>
-                                                                                        </connections>
                                                                                     </textField>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -623,9 +582,6 @@
                                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                         <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="15"/>
                                                                                         <textInputTraits key="textInputTraits"/>
-                                                                                        <connections>
-                                                                                            <outlet property="delegate" destination="NgL-VB-5S9" id="EWj-Hd-xWg"/>
-                                                                                        </connections>
                                                                                     </textField>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -685,7 +641,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="actionSubmit:" destination="NgL-VB-5S9" eventType="touchUpInside" id="BBI-dY-scf"/>
+                                                                    <action selector="actionNext:" destination="NgL-VB-5S9" eventType="touchUpInside" id="6xJ-m5-u9F"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -763,6 +719,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="40"/>
                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="actionListingAddProject:" destination="NgL-VB-5S9" eventType="touchUpInside" id="ZNo-Zf-hiV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.96266549830000003" green="0.96266549830000003" blue="0.96266549830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -802,6 +761,9 @@
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDS-ix-LDj">
                                                                 <rect key="frame" x="-0.66666666666665719" y="0.0" width="116.33333333333333" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="actionListingAddProject:" destination="NgL-VB-5S9" eventType="touchUpInside" id="Nur-xa-1Jm"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="APP_BLACK_CLR"/>
@@ -860,10 +822,16 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_notification" backgroundImage="ic_noti_bg"/>
+                                        <connections>
+                                            <action selector="actionNotifications:" destination="NgL-VB-5S9" eventType="touchUpInside" id="I3h-JU-abz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egd-DJ-SYK">
                                         <rect key="frame" x="15" y="2.6666666666666643" width="45" height="45"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="actionProfile:" destination="NgL-VB-5S9" eventType="touchUpInside" id="LHM-0U-Si3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -900,19 +868,28 @@
                     </view>
                     <size key="freeformSize" width="393" height="900"/>
                     <connections>
-                        <outlet property="txtFldAadharBack" destination="2rp-jE-4NP" id="lHP-IC-eKH"/>
-                        <outlet property="txtFldFrontImg" destination="Tdp-p0-PYZ" id="StN-V1-w5b"/>
-                        <outlet property="txtFldPassport" destination="NWP-dk-kTj" id="Xkz-o5-JQ8"/>
+                        <outlet property="txtFldAgent" destination="qZu-dx-u70" id="C6T-W3-0iw"/>
+                        <outlet property="txtFldArea" destination="2rp-jE-4NP" id="Wf0-jY-3yB"/>
+                        <outlet property="txtFldCategory" destination="NWP-dk-kTj" id="Gcj-gj-Cof"/>
+                        <outlet property="txtFldDeveloper" destination="P4y-gb-Wdd" id="QKx-ru-aOl"/>
+                        <outlet property="txtFldLocation" destination="EIO-6Q-TxS" id="whY-J5-fSM"/>
+                        <outlet property="txtFldPrice" destination="idi-MG-R2g" id="uED-9D-DN7"/>
+                        <outlet property="txtFldSubCategory" destination="2DF-BQ-1Ow" id="vca-C9-Uss"/>
+                        <outlet property="txtFldTowerName" destination="Wdr-IQ-mKO" id="v2u-I8-Z7H"/>
+                        <outlet property="txtFldType" destination="0qE-cg-VII" id="C38-RX-c9M"/>
+                        <outlet property="txtFldUnit" destination="Tdp-p0-PYZ" id="rvD-mF-V4i"/>
+                        <outletCollection property="btnOptions" destination="u7U-T6-Tch" collectionClass="NSMutableArray" id="DxI-mG-RQK"/>
+                        <outletCollection property="btnOptions" destination="gDS-ix-LDj" collectionClass="NSMutableArray" id="rKw-CI-cNQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHS-Sg-cqu" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="628" y="-28"/>
         </scene>
-        <!--Become Super AgentVC-->
+        <!--Add Property TwoVC-->
         <scene sceneID="iRD-I0-Su3">
             <objects>
-                <viewController storyboardIdentifier="BecomeSuperAgentVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u1y-J5-a2p" customClass="BecomeSuperAgentVC" customModule="PropDub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPropertyTwoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u1y-J5-a2p" customClass="AddPropertyTwoVC" customModule="PropDub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ggn-Wm-rXW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -947,9 +924,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="WGc-78-4Js"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubN-xG-dTP">
                                                                                 <rect key="frame" x="278" y="8.3333333333333428" width="20" height="20"/>
@@ -960,7 +934,7 @@
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_add_photo"/>
                                                                                 <connections>
-                                                                                    <action selector="actionUploadImg:" destination="u1y-J5-a2p" eventType="touchUpInside" id="YDL-MV-tXC"/>
+                                                                                    <action selector="actionUploadImage:" destination="u1y-J5-a2p" eventType="touchUpInside" id="NAn-qB-Z1m"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -1015,9 +989,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="72G-W7-eW3"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1069,9 +1040,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="hDZ-ed-acZ"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rv6-qe-Qyx">
                                                                                 <rect key="frame" x="278" y="8.3333333333333144" width="20" height="20"/>
@@ -1081,9 +1049,6 @@
                                                                                 </constraints>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_add_photo"/>
-                                                                                <connections>
-                                                                                    <action selector="actionUploadImg:" destination="u1y-J5-a2p" eventType="touchUpInside" id="pd1-dT-6ZR"/>
-                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1137,9 +1102,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="Zf6-i9-DRd"/>
-                                                                                </connections>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpc-Gv-aQy">
                                                                                 <rect key="frame" x="278" y="8.3333333333333144" width="20" height="20"/>
@@ -1149,9 +1111,6 @@
                                                                                 </constraints>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="ic_add_photo"/>
-                                                                                <connections>
-                                                                                    <action selector="actionUploadImg:" destination="u1y-J5-a2p" eventType="touchUpInside" id="V4W-HL-VgW"/>
-                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1205,9 +1164,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="pCY-de-9ds"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1259,9 +1215,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="zX4-6N-cNo"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1313,9 +1266,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="888-Ce-g83"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1367,9 +1317,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="QSl-ez-ONw"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1421,9 +1368,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="3GE-l8-BJD"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1475,9 +1419,6 @@
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <outlet property="delegate" destination="u1y-J5-a2p" id="Rua-AV-bmp"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.9694760442" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1690,7 +1631,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="actionSubmit:" destination="u1y-J5-a2p" eventType="touchUpInside" id="yop-We-sHO"/>
+                                                                    <action selector="actionSubmit:" destination="u1y-J5-a2p" eventType="touchUpInside" id="Qcc-Kc-G0C"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1765,6 +1706,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="40"/>
                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="actionListingAddProject:" destination="u1y-J5-a2p" eventType="touchUpInside" id="NCx-hv-1xQ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.96266549830000003" green="0.96266549830000003" blue="0.96266549830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1804,6 +1748,9 @@
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HP2-Du-ecI">
                                                                 <rect key="frame" x="-0.66666666666665719" y="0.0" width="116.33333333333333" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="actionListingAddProject:" destination="u1y-J5-a2p" eventType="touchUpInside" id="ibs-4m-WAd"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="APP_BLACK_CLR"/>
@@ -1862,10 +1809,16 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_notification" backgroundImage="ic_noti_bg"/>
+                                        <connections>
+                                            <action selector="actionNotifications:" destination="u1y-J5-a2p" eventType="touchUpInside" id="yA7-oV-ba3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-02-P8Z">
                                         <rect key="frame" x="15" y="2.6666666666666643" width="45" height="45"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="actionProfile:" destination="u1y-J5-a2p" eventType="touchUpInside" id="qe1-TM-BKa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1902,7 +1855,9 @@
                     </view>
                     <size key="freeformSize" width="393" height="1300"/>
                     <connections>
-                        <outlet property="txtFldPassport" destination="haP-nb-Pda" id="P3N-SF-uWr"/>
+                        <outlet property="txtFldImage" destination="haP-nb-Pda" id="DaU-CV-fhV"/>
+                        <outletCollection property="actionOptions" destination="iF1-Ip-rO5" collectionClass="NSMutableArray" id="nK9-cG-svi"/>
+                        <outletCollection property="actionOptions" destination="HP2-Du-ecI" collectionClass="NSMutableArray" id="2pK-MO-Ilx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSd-yJ-hfX" sceneMemberID="firstResponder"/>
