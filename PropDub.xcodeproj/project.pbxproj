@@ -10,6 +10,8 @@
 		2BD3FC7763D77BB5CC72BAE7 /* Pods_PropDub_PropDubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADBB71E9794DA3539C3D12A /* Pods_PropDub_PropDubUITests.framework */; };
 		30346E3E0DC68BC8E1E54360 /* Pods_PropDub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D7425318A6170D38437D22 /* Pods_PropDub.framework */; };
 		720408272C0448C300CC4478 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720408262C0448C300CC4478 /* FilterVC.swift */; };
+		7205A4D62C369D7E00C85E58 /* AddPropertyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7205A4D52C369D7E00C85E58 /* AddPropertyVM.swift */; };
+		7205A4D92C36AB2500C85E58 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7205A4D82C36AB2500C85E58 /* CategoryModel.swift */; };
 		721F28E42BF36EA800893B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F28E32BF36EA800893B62 /* AppDelegate.swift */; };
 		721F28E62BF36EA800893B62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F28E52BF36EA800893B62 /* SceneDelegate.swift */; };
 		721F28E82BF36EA800893B62 /* PropertyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F28E72BF36EA800893B62 /* PropertyListVC.swift */; };
@@ -105,6 +107,8 @@
 		24D9C6454910772FA4E7466F /* Pods-PropDub-PropDubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropDub-PropDubUITests.release.xcconfig"; path = "Target Support Files/Pods-PropDub-PropDubUITests/Pods-PropDub-PropDubUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3DFB7A1C5A7726651D078443 /* Pods-PropDub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropDub.debug.xcconfig"; path = "Target Support Files/Pods-PropDub/Pods-PropDub.debug.xcconfig"; sourceTree = "<group>"; };
 		720408262C0448C300CC4478 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		7205A4D52C369D7E00C85E58 /* AddPropertyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyVM.swift; sourceTree = "<group>"; };
+		7205A4D82C36AB2500C85E58 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		721F28E02BF36EA800893B62 /* PropDub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropDub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		721F28E32BF36EA800893B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		721F28E52BF36EA800893B62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +215,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7205A4D32C369BD400C85E58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72A382672C3576E200ECEA3F /* AddPropertyVC.swift */,
+				72A382692C35789600ECEA3F /* AddPropertyTwoVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7205A4D42C369BE000C85E58 /* ViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				7205A4D52C369D7E00C85E58 /* AddPropertyVM.swift */,
+			);
+			path = ViewModule;
+			sourceTree = "<group>";
+		};
+		7205A4D72C36AAFB00C85E58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7205A4D82C36AB2500C85E58 /* CategoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		721F28D72BF36EA800893B62 = {
 			isa = PBXGroup;
 			children = (
@@ -435,8 +464,9 @@
 		72A382662C3576CB00ECEA3F /* Agent */ = {
 			isa = PBXGroup;
 			children = (
-				72A382672C3576E200ECEA3F /* AddPropertyVC.swift */,
-				72A382692C35789600ECEA3F /* AddPropertyTwoVC.swift */,
+				7205A4D72C36AAFB00C85E58 /* Model */,
+				7205A4D42C369BE000C85E58 /* ViewModule */,
+				7205A4D32C369BD400C85E58 /* Views */,
 			);
 			path = Agent;
 			sourceTree = "<group>";
@@ -818,6 +848,8 @@
 				72CB0D272C1089DA00589618 /* LoginVM.swift in Sources */,
 				72E4CFC52C007CE7009F7DF8 /* PropertyDetailVC.swift in Sources */,
 				722FAEE52BFF23210003FB07 /* DeveloperVC.swift in Sources */,
+				7205A4D62C369D7E00C85E58 /* AddPropertyVM.swift in Sources */,
+				7205A4D92C36AB2500C85E58 /* CategoryModel.swift in Sources */,
 				72E4CFC82C008B13009F7DF8 /* PropertyTVC.swift in Sources */,
 				724A797B2BF722F500941EA8 /* TabbarVC.swift in Sources */,
 				72CB0D232C1088B900589618 /* OtpVC.swift in Sources */,

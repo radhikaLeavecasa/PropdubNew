@@ -26,7 +26,10 @@ enum Api: Equatable {
     case verifyUserLogin
     case superAgentLogin
     case agentLogin
-    
+    case category
+    case subCategory
+    case type
+   
     func rawValued() -> String {
         switch self {
         case .homeApi:
@@ -45,6 +48,12 @@ enum Api: Equatable {
             return "send-user-otp"
         case .agentLogin:
             return "login"
+        case .category:
+            return "categoryapi"
+        case .subCategory:
+            return "subcategoryapi"
+        case .type:
+            return "typeapi"
         }
     }
 }
