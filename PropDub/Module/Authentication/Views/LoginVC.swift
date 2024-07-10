@@ -18,10 +18,19 @@ class LoginVC: UIViewController {
     //MARK: - Variable
     var viewModel = LoginVM()
     var selectedTab = 0
+    var isAgentLogin = false
     //MARK: - Lifecycle method
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        if isAgentLogin {
+            vwAgree.isHidden = true
+            vwPassword.isHidden = false
+            btnUserAgentLogin[0].isHidden = true
+            btnUserAgentLogin[1].borderColor = .clear
+            btnUserAgentLogin[1].titleLabel?.font = UIFont(name: "RedHatText-Regular", size: 18)
+            btnUserAgentLogin[1].isUserInteractionEnabled = false
+            selectedTab = 1
+        }
     }
     //MARK: - @IBActions
     @IBAction func actionBack(_ sender: Any) {
@@ -81,11 +90,11 @@ class LoginVC: UIViewController {
                 } else {
                     let param: [String:AnyObject] = [WSRequestParams.WS_REQS_PARAM_EMAIL: txtFldEmail.text!,
                                                      WSRequestParams.WS_REQS_PARAM_PASSWORD: txtFldPassword.text!] as! [String:AnyObject]
-                    viewModel.userLoginApi(param: param, { val, msg in
+                    viewModel.agentLoginApi(param: param, { val, msg in
                         if val {
-                            let vc = ViewControllerHelper.getViewController(ofType: .TabbarVC, StoryboardName: .Main) as! TabbarVC
+                            let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyVC, StoryboardName: .Agent) as! AddPropertyVC
                             self.setView(vc: vc)
-                            Proxy.shared.showSnackBar(message: msg)
+                            //Proxy.shared.showSnackBar(message: msg)
                         } else {
                             if msg == CommonError.INTERNET {
                                 Proxy.shared.presentAlert(CommonMessage.NO_INTERNET_CONNECTION,titleMsg: "Oops!", vc: self)

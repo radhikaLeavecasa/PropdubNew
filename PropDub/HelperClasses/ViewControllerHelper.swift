@@ -10,6 +10,7 @@ import UIKit
 enum StoryboardName : String{
     
     case Main
+    case Agent
   
 }
 
@@ -28,6 +29,7 @@ enum ViewControllerType : String{
     case AboutUsVC
     case ProfileVC
     case LoginVC
+    case AddPropertyVC
     case OtpVC
     
 }

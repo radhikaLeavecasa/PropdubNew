@@ -44,21 +44,26 @@ class HomeVC: UIViewController {
     
     //MARK: - @IBAction
     @IBAction func actionPropertyAgent(_ sender: UIButton) {
-        for btn in btnPropertAgent {
-            vwPropertyAgent[btn.tag].backgroundColor = sender.tag == btn.tag ? .black : .clear
-            if sender.tag == btn.tag {
-                if sender.tag == 0 {
-                    lblAgent.textColor = .darkGray
-                    lblProperty.textColor = .white
-                    imgVwAgent.image = UIImage(named: "ic_agent")
-                    imgVwProperty.image = UIImage(named: "ic_property_selected")
-                } else {
-                    lblProperty.textColor = .darkGray
-                    lblAgent.textColor = .white
-                    imgVwAgent.image = UIImage(named: "ic_agent_selected")
-                    imgVwProperty.image = UIImage(named: "ic_property_unselected")
-                }
-            }
+//        for btn in btnPropertAgent {
+//            vwPropertyAgent[btn.tag].backgroundColor = sender.tag == btn.tag ? .black : .clear
+//            if sender.tag == btn.tag {
+//                if sender.tag == 0 {
+//                    lblAgent.textColor = .darkGray
+//                    lblProperty.textColor = .white
+//                    imgVwAgent.image = UIImage(named: "ic_agent")
+//                    imgVwProperty.image = UIImage(named: "ic_property_selected")
+//                } else {
+//                    lblProperty.textColor = .darkGray
+//                    lblAgent.textColor = .white
+//                    imgVwAgent.image = UIImage(named: "ic_agent_selected")
+//                    imgVwProperty.image = UIImage(named: "ic_property_unselected")
+//                }
+//            }
+//        }
+        if sender.tag == 1 {
+            let vc = ViewControllerHelper.getViewController(ofType: .LoginVC, StoryboardName: .Main) as! LoginVC
+            vc.isAgentLogin = true
+            self.pushView(vc: vc)
         }
     }
     @IBAction func actionProfile(_ sender: Any) {
