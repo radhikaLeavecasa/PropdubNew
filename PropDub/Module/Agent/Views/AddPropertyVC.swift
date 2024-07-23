@@ -10,6 +10,8 @@ import DropDown
 
 class AddPropertyVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var vwAddPropert: UIView!
+    @IBOutlet weak var vwListing: UIView!
     @IBOutlet weak var cnstCollVwHeightType: NSLayoutConstraint!
     @IBOutlet weak var collVwType: UICollectionView!
     @IBOutlet weak var cnstCollVwHeightSubCat: NSLayoutConstraint!
@@ -27,6 +29,9 @@ class AddPropertyVC: UIViewController {
     @IBOutlet weak var txtFldSubCategory: UITextField!
     @IBOutlet weak var txtFldCategory: UITextField!
     @IBOutlet var btnOptions: [UIButton]!
+    @IBOutlet var vwListingProperty: [UIView]!
+    @IBOutlet var lblListingAgent: [UILabel]!
+    @IBOutlet var imgVwOptions: [UIImageView]!
     //MARK: - Variables
     var viewModel = AddPropertyVM()
     let dropDown = DropDown()
@@ -108,9 +113,24 @@ class AddPropertyVC: UIViewController {
     
     @IBAction func actionNext(_ sender: Any) {
     }
-    @IBAction func actionListingAddProject(_ sender: Any) {
+    @IBAction func actionListingAddProject(_ sender: UIButton) {
+        for btn in btnOptions {
+            vwListingProperty[btn.tag].backgroundColor = sender.tag == btn.tag ? .black : .clear
+            if sender.tag == btn.tag {
+                vwListingProperty[btn.tag].backgroundColor = .darkGray
+                lblListingAgent[btn.tag].textColor = .white
+                imgVwOptions[btn.tag].image = sender.tag == 0 ? UIImage(named: "ic_listing_selected") : UIImage(named: "ic_listing_unselected")
+                imgVwOptions[btn.tag].image = sender.tag == 1 ? UIImage(named: "ic_addProp_Selected") : UIImage(named: "ic_addprop_Unselected")
+            } else {
+                vwListingProperty[btn.tag].backgroundColor = .white
+                lblListingAgent[btn.tag].textColor = .darkGray
+                imgVwOptions[btn.tag].image = sender.tag == 0 ? UIImage(named: "ic_listing_selected") : UIImage(named: "ic_listing_unselected")
+                imgVwOptions[btn.tag].image = sender.tag == 1 ? UIImage(named: "ic_addProp_Selected") : UIImage(named: "ic_addprop_Unselected")
+            }
+        }
+        vwListing.isHidden = sender.tag == 1
+        vwAddPropert.isHidden = sender.tag == 0
     }
-    
 }
 extension AddPropertyVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -170,5 +190,16 @@ extension AddPropertyVC: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             return CGSize(width: label.frame.width+15, height: self.collVwType.frame.size.height)
         }
+    }
+}
+
+extension AddPropertyVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyListingTVC") as! MyListingTVC
+        return cell
     }
 }

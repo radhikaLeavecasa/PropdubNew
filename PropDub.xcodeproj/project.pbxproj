@@ -27,6 +27,7 @@
 		722FAEE32BFF1A400003FB07 /* DeveloperListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FAEE22BFF1A400003FB07 /* DeveloperListModel.swift */; };
 		722FAEE52BFF23210003FB07 /* DeveloperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FAEE42BFF23210003FB07 /* DeveloperVC.swift */; };
 		722FAEE92BFF52CE0003FB07 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FAEE82BFF52CE0003FB07 /* SplashVC.swift */; };
+		72351C6A2C4FDBAF0084E0F7 /* MyListingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72351C682C4FDBAF0084E0F7 /* MyListingTVC.swift */; };
 		724A79722BF719C600941EA8 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A796E2BF719C600941EA8 /* WebServices.swift */; };
 		724A79732BF719C600941EA8 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A796F2BF719C600941EA8 /* Api.swift */; };
 		724A79742BF719C600941EA8 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A79702BF719C600941EA8 /* CommonFunctions.swift */; };
@@ -128,6 +129,7 @@
 		722FAEE22BFF1A400003FB07 /* DeveloperListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListModel.swift; sourceTree = "<group>"; };
 		722FAEE42BFF23210003FB07 /* DeveloperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperVC.swift; sourceTree = "<group>"; };
 		722FAEE82BFF52CE0003FB07 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		72351C682C4FDBAF0084E0F7 /* MyListingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingTVC.swift; sourceTree = "<group>"; };
 		724A796E2BF719C600941EA8 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		724A796F2BF719C600941EA8 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		724A79702BF719C600941EA8 /* CommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				72D982D02BFCD42000E20B9B /* NewDevelopmentsCVC.swift */,
 				72D982D12BFCD42000E20B9B /* NewDevelopmentsCVC.xib */,
 				726A5AC22BFCBC6F00CF84FE /* PropertyTypeCVC.xib */,
+				72351C682C4FDBAF0084E0F7 /* MyListingTVC.swift */,
 				72D982CC2BFCCF7B00E20B9B /* ExclusiveCVC.swift */,
 				72D982CD2BFCCF7B00E20B9B /* ExclusiveCVC.xib */,
 				72671D432BF77A560078967D /* HomeHeaderNewXIB.xib */,
@@ -811,6 +814,7 @@
 				722FAEE32BFF1A400003FB07 /* DeveloperListModel.swift in Sources */,
 				72CB0D292C1089E400589618 /* OtpVM.swift in Sources */,
 				724A79752BF719C600941EA8 /* CommonParam.swift in Sources */,
+				72351C6A2C4FDBAF0084E0F7 /* MyListingTVC.swift in Sources */,
 				727402FE2BFDECFF000D22BE /* HomeVM.swift in Sources */,
 				72E4CFCA2C008E2C009F7DF8 /* ContactOptionsCVC.swift in Sources */,
 				722FAEE92BFF52CE0003FB07 /* SplashVC.swift in Sources */,

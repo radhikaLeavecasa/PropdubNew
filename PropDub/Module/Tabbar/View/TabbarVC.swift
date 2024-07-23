@@ -66,7 +66,7 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         let shortlistedIcon = UITabBarItem(title: "Shortlisted", image: UIImage(named: "ic_shortlisted_unselected"), selectedImage: UIImage(named: "ic_shortlisted_selected"))
         shortlisted.tabBarItem = shortlistedIcon
         
-        let enquiry = ViewControllerHelper.getViewController(ofType: .HomeVC, StoryboardName: .Main) as! HomeVC
+        let enquiry = ViewControllerHelper.getViewController(ofType: .EnquiryVC, StoryboardName: .Main) as! EnquiryVC
         let enquiryIcon = UITabBarItem(title: "Enquiry", image: UIImage(named: "ic_enquiry_unselected"), selectedImage: UIImage(named: "ic_enquiry_selected"))
         enquiry.tabBarItem = enquiryIcon
         

@@ -31,6 +31,7 @@ enum ViewControllerType : String{
     case LoginVC
     case AddPropertyVC
     case OtpVC
+    case EnquiryVC
     
 }
 
