@@ -10,6 +10,7 @@ import OTPFieldView
 
 class OtpVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var vwStack: UIStackView!
     @IBOutlet weak var vwOtp: OTPFieldView!
     //MARK: - Variables
     var otp = String()
@@ -17,10 +18,12 @@ class OtpVC: UIViewController {
     var viewModel = OtpVM()
     var email = String()
     var type = Int()
+    var isSuperAgent = false
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        vwStack.isHidden = isSuperAgent
         setupOtpView()
     }
     //MARK: - @IBActions
@@ -33,8 +36,13 @@ class OtpVC: UIViewController {
                          WSRequestParams.WS_REQS_PARAM_OTP: self.otp] as! [String:AnyObject]
             viewModel.otpVerifyApi(param) { val, msg in
                 if val {
-//                    let vc = ViewControllerHelper.getViewController(ofType: .HomeVC, StoryboardName: .Main) as! HomeVC
-//                    self.setView(vc: vc)
+                    if self.isSuperAgent {
+                        let vc = ViewControllerHelper.getViewController(ofType: .BecomeSuperAgentVC, StoryboardName: .Main) as! BecomeSuperAgentVC
+                        self.setView(vc: vc)
+                    } else {
+                        //                    let vc = ViewControllerHelper.getViewController(ofType: .HomeVC, StoryboardName: .Main) as! HomeVC
+                        //                    self.setView(vc: vc)
+                    }
                 } else {
                     if msg == CommonError.INTERNET {
                         Proxy.shared.presentAlert(CommonMessage.NO_INTERNET_CONNECTION,titleMsg: "Oops!", vc: self)

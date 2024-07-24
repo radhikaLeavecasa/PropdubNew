@@ -51,6 +51,9 @@ class ProfileVC: UIViewController {
     @IBAction func actionLogout(_ sender: Any) {
         isLogin = false
     }
+    @IBAction func actionBack(_ sender: Any) {
+        popView()
+    }
     @IBAction func actionSocialLinks(_ sender: UIButton) {
         var urlStr = ""
         switch sender.tag {
@@ -72,5 +75,9 @@ class ProfileVC: UIViewController {
                 UIApplication.shared.openURL(url)
             }
         }
+    }
+    @IBAction func actionBecomeSuperAgent(_ sender: Any) {
+        let vc = ViewControllerHelper.getViewController(ofType: .BecomeAgentVC, StoryboardName: .Main) as! BecomeAgentVC
+        self.pushView(vc: vc)
     }
 }

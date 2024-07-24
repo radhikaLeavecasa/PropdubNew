@@ -28,7 +28,7 @@ class LoginVM: NSObject {
             Proxy.shared.stopAnimation()
             if status == true {
                 if response is [String: Any] {
-                    completion(true, "")
+                    completion(true, msg)
                 }
             }else{
                 completion(false, msg)
@@ -41,13 +41,14 @@ class LoginVM: NSObject {
         WebService.callApi(api: .agentLogin, method: .post, param: param) { status, msg, response in
             Proxy.shared.stopAnimation()
             if status == true {
-                if response is [String: Any] {
-                    completion(true, "")
+                if let data = response as? [String:Any] {
+                    let userData = data[CommonParam.DATA] as? [String:Any] ?? [:]
+                    Cookies.userInfoSave(dict:userData)
+                    completion(true, msg)
                 }
             }else{
                 completion(false, msg)
             }
         }
     }
-    
 }

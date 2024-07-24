@@ -56,6 +56,7 @@
 		727403002BFDED58000D22BE /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727402FF2BFDED58000D22BE /* Proxy.swift */; };
 		727403032BFDF51F000D22BE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727403022BFDF51F000D22BE /* HomeModel.swift */; };
 		727403052BFE1D33000D22BE /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727403042BFE1D33000D22BE /* Extension+UIImage.swift */; };
+		727E00DE2C50CE750063776F /* Cookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E00DD2C50CE750063776F /* Cookies.swift */; };
 		729083932C119DD100D88249 /* BecomeSuperAgentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729083922C119DD100D88249 /* BecomeSuperAgentVC.swift */; };
 		729083952C11B5AD00D88249 /* BecomeSuperAgentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729083942C11B5AD00D88249 /* BecomeSuperAgentVM.swift */; };
 		72924B5B2C09D578000A1615 /* AlertPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72924B5A2C09D578000A1615 /* AlertPopUpVC.swift */; };
@@ -158,6 +159,7 @@
 		727402FF2BFDED58000D22BE /* Proxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
 		727403022BFDF51F000D22BE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		727403042BFE1D33000D22BE /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		727E00DD2C50CE750063776F /* Cookies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookies.swift; sourceTree = "<group>"; };
 		729083922C119DD100D88249 /* BecomeSuperAgentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeSuperAgentVC.swift; sourceTree = "<group>"; };
 		729083942C11B5AD00D88249 /* BecomeSuperAgentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeSuperAgentVM.swift; sourceTree = "<group>"; };
 		72924B5A2C09D578000A1615 /* AlertPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopUpVC.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				722FAEE02BFF030B0003FB07 /* UIViewControllerExtension.swift */,
 				72C29E9A2C08593900FFADE4 /* UIImagePicker.swift */,
 				727402FF2BFDED58000D22BE /* Proxy.swift */,
+				727E00DD2C50CE750063776F /* Cookies.swift */,
 				724A797C2BF725B200941EA8 /* ViewControllerHelper.swift */,
 				724A79702BF719C600941EA8 /* CommonFunctions.swift */,
 				724A79712BF719C600941EA8 /* CommonParam.swift */,
@@ -843,6 +846,7 @@
 				7267982A2C0762DC0083ABDC /* ProfileVC.swift in Sources */,
 				72A3826A2C35789600ECEA3F /* AddPropertyTwoVC.swift in Sources */,
 				72C29EA52C089BD400FFADE4 /* ContactUsVM.swift in Sources */,
+				727E00DE2C50CE750063776F /* Cookies.swift in Sources */,
 				721F28E42BF36EA800893B62 /* AppDelegate.swift in Sources */,
 				724A79722BF719C600941EA8 /* WebServices.swift in Sources */,
 				72C29E9B2C08593900FFADE4 /* UIImagePicker.swift in Sources */,

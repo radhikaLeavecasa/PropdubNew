@@ -10,6 +10,8 @@ import DropDown
 
 class AddPropertyVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var cnstTblVwHeight: NSLayoutConstraint!
+    @IBOutlet weak var tblVwPropertyList: UITableView!
     @IBOutlet weak var vwAddPropert: UIView!
     @IBOutlet weak var vwListing: UIView!
     @IBOutlet weak var cnstCollVwHeightType: NSLayoutConstraint!
@@ -44,9 +46,13 @@ class AddPropertyVC: UIViewController {
     var arrSelectedSubCat = [String]()
     var arrSelectedType = [String]()
     var arrSelectedDevelopers = [String]()
+    
+    var arrMyProperty: [DataItemModel]?
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        actionListingAddProject(btnOptions[0])
+        tblVwPropertyList.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         let group = DispatchGroup()
         Proxy.shared.loadAnimation()
         group.enter()
@@ -101,11 +107,30 @@ class AddPropertyVC: UIViewController {
         })
        
         group.notify(queue: .main) {
+            self.arrMyProperty = Proxy.shared.arrPropertyList?.filter({$0.agent?.id == Cookies.userInfo()?.id})
             Proxy.shared.stopAnimation()
+            self.tblVwPropertyList.reloadData()
         }
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
+        if keyPath == "contentSize" {
+            if object is UITableView {
+                if let newValue = change?[.newKey]{
+                    let newSize = newValue as! CGSize
+                    self.cnstTblVwHeight.constant = newSize.height
+                }
+            }
+        }
+    }
+    
     //MARK: - @IBActions
     @IBAction func actionProfile(_ sender: Any) {
+        let vc = ViewControllerHelper.getViewController(ofType: .ProfileVC, StoryboardName: .Main) as! ProfileVC
+        vc.isLogin = false
+        self.pushView(vc: vc)
+        
     }
     
     @IBAction func actionNotifications(_ sender: Any) {
@@ -117,13 +142,13 @@ class AddPropertyVC: UIViewController {
         for btn in btnOptions {
             vwListingProperty[btn.tag].backgroundColor = sender.tag == btn.tag ? .black : .clear
             if sender.tag == btn.tag {
-                vwListingProperty[btn.tag].backgroundColor = .darkGray
+                vwListingProperty[btn.tag].backgroundColor = .black
                 lblListingAgent[btn.tag].textColor = .white
                 imgVwOptions[btn.tag].image = sender.tag == 0 ? UIImage(named: "ic_listing_selected") : UIImage(named: "ic_listing_unselected")
                 imgVwOptions[btn.tag].image = sender.tag == 1 ? UIImage(named: "ic_addProp_Selected") : UIImage(named: "ic_addprop_Unselected")
             } else {
-                vwListingProperty[btn.tag].backgroundColor = .white
-                lblListingAgent[btn.tag].textColor = .darkGray
+                vwListingProperty[btn.tag].backgroundColor = .clear
+                lblListingAgent[btn.tag].textColor = .black
                 imgVwOptions[btn.tag].image = sender.tag == 0 ? UIImage(named: "ic_listing_selected") : UIImage(named: "ic_listing_unselected")
                 imgVwOptions[btn.tag].image = sender.tag == 1 ? UIImage(named: "ic_addProp_Selected") : UIImage(named: "ic_addprop_Unselected")
             }
@@ -195,11 +220,22 @@ extension AddPropertyVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension AddPropertyVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        self.arrMyProperty?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyListingTVC") as! MyListingTVC
+        cell.backgroundColor = .clear
+        cell.lblName.text = arrMyProperty?[indexPath.row].location
+        cell.lblLocation.text = arrMyProperty?[indexPath.row].unit
+        cell.lblPrice.text = arrMyProperty?[indexPath.row].startingPrice
+        cell.imgVwProperty.sd_setImage(with: URL(string: "\(imageBaseUrl)\(arrMyProperty?[indexPath.row].image ?? "")"), placeholderImage: .placeholderImage())
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .PropertyDetailVC, StoryboardName: .Main) as? PropertyDetailVC {
+            vc.propertyDetail = arrMyProperty?[indexPath.row]
+            self.pushView(vc: vc)
+        }
     }
 }

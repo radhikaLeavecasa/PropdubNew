@@ -8,15 +8,16 @@
 import UIKit
 
 class BecomeAgentVC: UIViewController {
-
+    //MARK: - @IBOutlets
     @IBOutlet weak var txtFldEmail: UITextField!
-    
+    //MARK: - Variables
     var viewModel = LoginVM()
-    
+    //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    //MARK: - @IBActions
     @IBAction func actionNext(_ sender: Any) {
         
         if txtFldEmail.text?.isEmptyCheck() == true {
@@ -29,6 +30,7 @@ class BecomeAgentVC: UIViewController {
                 if val {
                     let vc = ViewControllerHelper.getViewController(ofType: .OtpVC, StoryboardName: .Main) as! OtpVC
                     vc.email = self.txtFldEmail.text!
+                    vc.isSuperAgent = true
                     self.pushView(vc: vc)
                     Proxy.shared.showSnackBar(message: msg)
                 } else {

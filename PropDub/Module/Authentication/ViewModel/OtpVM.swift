@@ -17,6 +17,9 @@ class OtpVM: NSObject {
 //                    let data2 = data["data"] as? [String:Any]
 //                    self.id = data2?["id"] as? Int ?? 0
 //                    GetData.share.saveUserToken(token: "\(self.id)")
+                    let userData = data[CommonParam.DATA] as? [String:Any] ?? [:]
+                    Cookies.userInfoSave(dict:userData)
+                   // GetData.share.saveUserToken(token: response[CommonParam.USER_TOKEN] as? String ?? "")
                     completion(true, "")
                 }
             } else {
