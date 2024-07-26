@@ -238,7 +238,7 @@ struct WebService{
             switch response.result {
             case .success(let value):
                 if let responseValue = value as? [String: AnyObject] {
-                    if let message = responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String, message == Strings.SUCCESSFULLY_UPLOAD_PROFILE_PIC {
+                    if let message = responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String {
                         completion(true, "\(message)", [:])
                     }
                 } else {

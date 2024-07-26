@@ -67,5 +67,335 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "actionSubmit(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1 - bf37b2af66c27f5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "2524">
+               </Location>
+               <Location
+                  uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1 - c6caa359ecdd188a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1 - c6caa359ecdd188a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1 - bf37b2af66c27f5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "2516">
+               </Location>
+               <Location
+                  uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1 - bf37b2af66c27f5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "2624">
+               </Location>
+               <Location
+                  uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1 - c6caa359ecdd188a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BE6EA3F-A7DA-419D-8273-28DC1AA8DBEC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PropDub/HelperClasses/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "uploadImageWithURL(api:dictImage:parameter:header:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3BE6EA3F-A7DA-419D-8273-28DC1AA8DBEC - 439fae74424f608e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "242"
+                  endingLineNumber = "242"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "3BE6EA3F-A7DA-419D-8273-28DC1AA8DBEC - 439fae74424f608e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "242"
+                  endingLineNumber = "242"
+                  offsetFromSymbolStart = "1408">
+               </Location>
+               <Location
+                  uuid = "3BE6EA3F-A7DA-419D-8273-28DC1AA8DBEC - 439fae74424f608e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "242"
+                  endingLineNumber = "242"
+                  offsetFromSymbolStart = "1336">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBA8126D-9A67-4DA5-A775-9A3700BAAA9A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PropDub/HelperClasses/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "uploadImageWithURL(api:dictImage:parameter:header:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CBA8126D-9A67-4DA5-A775-9A3700BAAA9A - 439fae74424f61c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "2160">
+               </Location>
+               <Location
+                  uuid = "CBA8126D-9A67-4DA5-A775-9A3700BAAA9A - 439fae74424f61c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "2260">
+               </Location>
+               <Location
+                  uuid = "CBA8126D-9A67-4DA5-A775-9A3700BAAA9A - 439fae74424f61c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "2176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DE51817-EEFE-42A8-85E0-836D3206B3DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PropDub/HelperClasses/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "uploadImageWithURL(api:dictImage:parameter:header:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1DE51817-EEFE-42A8-85E0-836D3206B3DC - 439fae74424f6129"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "245"
+                  endingLineNumber = "245"
+                  offsetFromSymbolStart = "776">
+               </Location>
+               <Location
+                  uuid = "1DE51817-EEFE-42A8-85E0-836D3206B3DC - 439fae74424f6129"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "245"
+                  endingLineNumber = "245"
+                  offsetFromSymbolStart = "876">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE30636B-4438-48CD-82B6-E59B21F9A63C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "actionSubmit(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE30636B-4438-48CD-82B6-E59B21F9A63C - ceb96cd242bb9cf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PropDub.BecomeSuperAgentVC.isValidatePassanger() -&gt; Swift.Bool"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "BE30636B-4438-48CD-82B6-E59B21F9A63C - c6caa359ecdd1b16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "352">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

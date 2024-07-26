@@ -38,7 +38,8 @@ class OtpVC: UIViewController {
                 if val {
                     if self.isSuperAgent {
                         let vc = ViewControllerHelper.getViewController(ofType: .BecomeSuperAgentVC, StoryboardName: .Main) as! BecomeSuperAgentVC
-                        self.setView(vc: vc)
+                        vc.email = self.email
+                        self.pushView(vc: vc)
                     } else {
                         //                    let vc = ViewControllerHelper.getViewController(ofType: .HomeVC, StoryboardName: .Main) as! HomeVC
                         //                    self.setView(vc: vc)

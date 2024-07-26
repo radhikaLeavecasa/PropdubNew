@@ -14,7 +14,7 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
     var picker = UIImagePickerController()
     var alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
     var viewController: UIViewController?
-    var pickImageCallback : ((UIImage) -> ())?
+    var pickImageCallback: ((UIImage, String?) -> ())?
     
     override init(){
         super.init()
@@ -37,7 +37,7 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         alert.addAction(cancelAction)
     }
 
-    func pickImage(_ viewController: UIViewController, _ callback: @escaping ((UIImage) -> ())) -> Bool {
+    func pickImage(_ viewController: UIViewController, _ callback: @escaping ((UIImage, String?) -> ())) -> Bool {
         pickImageCallback = callback
         self.viewController = viewController
 
@@ -79,7 +79,20 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
             guard let image = info[.originalImage] as? UIImage else {
                 fatalError("\(AlertMessages.EXPECTED_DICTIONARY_ALERT) \(info)")
             }
-            self.pickImageCallback?(image)
+            var imageName: String?
+            if let imageURL = info[.imageURL] as? URL {
+                // Get the filename from URL
+                imageName = imageURL.lastPathComponent
+            }
+            
+            if imageName == nil {
+                imageName = "\(Date().timeIntervalSince1970).jpg"
+                // Optionally save the image to a temporary directory
+               // saveImageToTemporaryDirectory(image: image, filename: imageName!)
+            }
+            
+            // Call the callback with the image and the filename
+            self.pickImageCallback?(image, imageName)
         }
     }
 }

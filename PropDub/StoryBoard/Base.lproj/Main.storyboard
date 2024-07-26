@@ -5391,9 +5391,9 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sya-b9-qTf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="313" height="60"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meg-xd-ZiG">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meg-xd-ZiG">
                                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="18.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="14"/>
                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -5405,7 +5405,7 @@
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
-                                                                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet"/>
                                                                             </textField>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_name" translatesAutoresizingMaskIntoConstraints="NO" id="UsI-dd-Dqk">
                                                                                 <rect key="frame" x="8" y="8.3333333333333428" width="25" height="20"/>
@@ -5453,7 +5453,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO3-Oe-pN1">
                                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="18.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="14"/>
                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -5511,16 +5511,16 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDJ-4o-3BH">
                                                                 <rect key="frame" x="0.0" y="139.99999999999997" width="313" height="60"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKZ-fQ-ACu">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKZ-fQ-ACu">
                                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="18.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="14"/>
                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELQ-Pn-GSh">
                                                                         <rect key="frame" x="0.0" y="23.666666666666689" width="313" height="36.333333333333343"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+91 000 000 0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="526-gj-24O">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="526-gj-24O">
                                                                                 <rect key="frame" x="36" y="2" width="262" height="32.333333333333336"/>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
@@ -5573,7 +5573,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi8-xr-N1o">
                                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="18.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="14"/>
                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -5585,7 +5585,7 @@
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                                             </textField>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location2" translatesAutoresizingMaskIntoConstraints="NO" id="HPp-zM-yZn">
                                                                                 <rect key="frame" x="8" y="8.3333333333333144" width="20" height="20"/>
@@ -5631,9 +5631,9 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-4y-D1g">
                                                                 <rect key="frame" x="0.0" y="280" width="313" height="60"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your passport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wh-UG-5yA">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wh-UG-5yA">
                                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="18.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="14"/>
                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -5701,7 +5701,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your aadhar card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXj-B1-non">
                                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="18.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="14"/>
                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -5721,7 +5721,7 @@
                                                                                             <outlet property="delegate" destination="ftd-nO-cGv" id="NcT-Tw-JOH"/>
                                                                                         </connections>
                                                                                     </textField>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgQ-BL-YLH">
+                                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgQ-BL-YLH">
                                                                                         <rect key="frame" x="114" y="8.3333333333333712" width="20" height="20"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="20" id="TaW-kD-QMd"/>
@@ -5768,7 +5768,7 @@
                                                                                             <outlet property="delegate" destination="ftd-nO-cGv" id="dnn-QJ-pVU"/>
                                                                                         </connections>
                                                                                     </textField>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEz-Q5-NaX">
+                                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEz-Q5-NaX">
                                                                                         <rect key="frame" x="114" y="8.3333333333333712" width="20" height="20"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="20" id="XZ9-Mn-9tG"/>
@@ -5824,7 +5824,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXQ-ju-FWU">
                                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="18.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="14"/>
                                                                         <color key="textColor" name="DARK_GRAY_CLR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -5903,6 +5903,11 @@
                                                     <constraint firstItem="297-am-dYs" firstAttribute="top" secondItem="Q9M-o7-ek9" secondAttribute="top" constant="20" id="iZ6-qi-EcF"/>
                                                     <constraint firstAttribute="trailing" secondItem="297-am-dYs" secondAttribute="trailing" constant="20" id="xGh-U3-ZGu"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5988,7 +5993,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iij-Tz-5I8">
-                                <rect key="frame" x="20" y="277" width="353" height="323"/>
+                                <rect key="frame" x="20" y="292" width="353" height="293"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Your Submission" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeL-nS-qzE">
                                         <rect key="frame" x="20" y="130" width="313" height="26.666666666666657"/>
@@ -5996,15 +6001,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-M9-563">
-                                        <rect key="frame" x="20" y="176.66666666666669" width="313" height="85"/>
-                                        <string key="text">Thank you for submitting your information to become a Super Agent. We appreciate your interest and will review your application shortly.</string>
-                                        <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will be in touch with you soon." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsE-Fw-nlN">
-                                        <rect key="frame" x="20" y="271.66666666666663" width="313" height="21.333333333333314"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will be in touch with you soon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-M9-563">
+                                        <rect key="frame" x="20" y="176.66666666666669" width="313" height="21.333333333333343"/>
                                         <fontDescription key="fontDescription" name="RedHatText-Regular" family="Red Hat Text" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -6016,20 +6014,40 @@
                                             <constraint firstAttribute="height" constant="70" id="fnl-Ck-kLc"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2R-ey-t3X">
+                                        <rect key="frame" x="20" y="223" width="313" height="45"/>
+                                        <color key="backgroundColor" name="APP_BLACK_CLR"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="g3J-Tk-CZn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RedHatText-SemiBold" family="Red Hat Text" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionDone:" destination="gZS-5A-X8y" eventType="touchUpInside" id="q0u-JH-nWL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="dEd-M9-563" firstAttribute="trailing" secondItem="SeL-nS-qzE" secondAttribute="trailing" id="47C-r8-OzZ"/>
-                                    <constraint firstItem="tsE-Fw-nlN" firstAttribute="top" secondItem="dEd-M9-563" secondAttribute="bottom" constant="10" id="9nG-Ch-tam"/>
+                                    <constraint firstItem="T2R-ey-t3X" firstAttribute="leading" secondItem="iij-Tz-5I8" secondAttribute="leading" constant="20" id="5la-BR-tzn"/>
+                                    <constraint firstAttribute="bottom" secondItem="T2R-ey-t3X" secondAttribute="bottom" constant="25" id="7GP-Fd-lLn"/>
+                                    <constraint firstItem="T2R-ey-t3X" firstAttribute="top" secondItem="dEd-M9-563" secondAttribute="bottom" constant="25" id="Kwn-jD-2nx"/>
                                     <constraint firstItem="dEd-M9-563" firstAttribute="top" secondItem="SeL-nS-qzE" secondAttribute="bottom" constant="20" id="L6m-4C-T2p"/>
                                     <constraint firstItem="SeL-nS-qzE" firstAttribute="leading" secondItem="iij-Tz-5I8" secondAttribute="leading" constant="20" id="MUG-1t-6F1"/>
                                     <constraint firstItem="4zx-rm-YNC" firstAttribute="centerX" secondItem="iij-Tz-5I8" secondAttribute="centerX" id="NmA-GM-bXC"/>
-                                    <constraint firstItem="tsE-Fw-nlN" firstAttribute="leading" secondItem="dEd-M9-563" secondAttribute="leading" id="NmL-pR-WpF"/>
-                                    <constraint firstItem="tsE-Fw-nlN" firstAttribute="trailing" secondItem="dEd-M9-563" secondAttribute="trailing" id="Tin-ay-ZuM"/>
                                     <constraint firstItem="SeL-nS-qzE" firstAttribute="top" secondItem="4zx-rm-YNC" secondAttribute="bottom" constant="30" id="WUJ-BJ-Ye4"/>
-                                    <constraint firstAttribute="bottom" secondItem="tsE-Fw-nlN" secondAttribute="bottom" constant="30" id="klN-4i-DC1"/>
                                     <constraint firstItem="4zx-rm-YNC" firstAttribute="top" secondItem="iij-Tz-5I8" secondAttribute="top" constant="30" id="klx-SX-1z4"/>
                                     <constraint firstItem="dEd-M9-563" firstAttribute="leading" secondItem="SeL-nS-qzE" secondAttribute="leading" id="lR5-gs-XRC"/>
+                                    <constraint firstAttribute="trailing" secondItem="T2R-ey-t3X" secondAttribute="trailing" constant="20" id="tgp-An-iLI"/>
                                     <constraint firstAttribute="trailing" secondItem="SeL-nS-qzE" secondAttribute="trailing" constant="20" id="vQ1-N2-YcY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -6038,8 +6056,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHu-te-qjs">
-                                <rect key="frame" x="343" y="232" width="30" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHu-te-qjs">
+                                <rect key="frame" x="343" y="247" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="1Th-bR-5Yd"/>
@@ -6052,9 +6070,6 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="actionCross:" destination="gZS-5A-X8y" eventType="touchUpInside" id="Acj-SB-vco"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="emj-Vr-fSe"/>
@@ -6068,14 +6083,10 @@
                             <constraint firstItem="emj-Vr-fSe" firstAttribute="trailing" secondItem="iij-Tz-5I8" secondAttribute="trailing" constant="20" id="v1x-PI-KBx"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lblDescription" destination="dEd-M9-563" id="y8b-Vp-l8Z"/>
-                        <outlet property="lblTitle" destination="SeL-nS-qzE" id="zZl-Ji-An8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXh-4A-bZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-712" y="1337"/>
+            <point key="canvasLocation" x="-712.2137404580152" y="1336.6197183098593"/>
         </scene>
         <!--EnquiryVC-->
         <scene sceneID="74W-Jn-quN">
@@ -6437,10 +6448,10 @@ we will get back to you shortly.</string>
                                     <constraint firstItem="RtY-Ia-Ilh" firstAttribute="leading" secondItem="FdX-0P-F6b" secondAttribute="leading" constant="15" id="iJQ-cj-ZBX"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csJ-wB-g27">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csJ-wB-g27">
                                 <rect key="frame" x="0.0" y="104" width="393" height="748"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APp-bs-Txl">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APp-bs-Txl">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="691.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMI Calculator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNF-iO-2ko">
@@ -6449,7 +6460,7 @@ we will get back to you shortly.</string>
                                                 <color key="textColor" name="APP_BLACK_CLR"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itb-G0-kI4">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itb-G0-kI4">
                                                 <rect key="frame" x="20" y="57.666666666666686" width="353" height="613.66666666666652"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0n-eF-Xd5">
@@ -6519,6 +6530,7 @@ we will get back to you shortly.</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="691.33333333333337" id="0ZQ-LE-PLr"/>
                                             <constraint firstAttribute="trailing" secondItem="CNF-iO-2ko" secondAttribute="trailing" constant="20" id="5X7-kl-ksY"/>
                                             <constraint firstItem="itb-G0-kI4" firstAttribute="top" secondItem="CNF-iO-2ko" secondAttribute="bottom" constant="15" id="9qi-SE-EQt"/>
                                             <constraint firstItem="CNF-iO-2ko" firstAttribute="leading" secondItem="APp-bs-Txl" secondAttribute="leading" constant="20" id="ACL-AM-UhO"/>
