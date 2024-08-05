@@ -4311,7 +4311,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WF3-bQ-zVL">
                                                         <rect key="frame" x="76.666666666666686" y="0.0" width="73.333333333333314" height="60"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-DP-2Nq">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-DP-2Nq">
                                                                 <rect key="frame" x="16.666666666666671" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" name="APP_BLACK_CLR"/>
                                                                 <constraints>
@@ -4348,7 +4348,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PG-Ux-Wrn">
                                                         <rect key="frame" x="153" y="0.0" width="73.666666666666686" height="60"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-Lt-Ty1">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-Lt-Ty1">
                                                                 <rect key="frame" x="16.666666666666657" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" name="APP_BLACK_CLR"/>
                                                                 <constraints>
@@ -4385,7 +4385,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBU-m1-lho">
                                                         <rect key="frame" x="229.66666666666671" y="0.0" width="73.333333333333343" height="60"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eza-Os-53k">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eza-Os-53k">
                                                                 <rect key="frame" x="16.666666666666629" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" name="APP_BLACK_CLR"/>
                                                                 <constraints>

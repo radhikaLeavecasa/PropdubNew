@@ -10,6 +10,7 @@ import DropDown
 
 class AddPropertyVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var lblListingHeading: UILabel!
     @IBOutlet weak var cnstTblVwHeight: NSLayoutConstraint!
     @IBOutlet weak var tblVwPropertyList: UITableView!
     @IBOutlet weak var vwAddPropert: UIView!
@@ -108,6 +109,7 @@ class AddPropertyVC: UIViewController {
        
         group.notify(queue: .main) {
             self.arrMyProperty = Proxy.shared.arrPropertyList?.filter({$0.agent?.id == Cookies.userInfo()?.id})
+            self.lblListingHeading.text = self.arrMyProperty?.count == 0 ? "No Property Added Yet!" : "My Listed Properties"
             Proxy.shared.stopAnimation()
             self.tblVwPropertyList.reloadData()
         }
@@ -126,6 +128,16 @@ class AddPropertyVC: UIViewController {
     }
     
     //MARK: - @IBActions
+    @IBAction func actionDeveloper(_ sender: Any) {
+        txtFldDeveloper.becomeFirstResponder()
+    }
+    @IBAction func actionType(_ sender: Any) {
+        txtFldType.becomeFirstResponder()
+    }
+    @IBAction func actionSubCategory(_ sender: Any) {
+    }
+    @IBAction func actionCategory(_ sender: Any) {
+    }
     @IBAction func actionProfile(_ sender: Any) {
         let vc = ViewControllerHelper.getViewController(ofType: .ProfileVC, StoryboardName: .Main) as! ProfileVC
         vc.isLogin = false
@@ -157,6 +169,7 @@ class AddPropertyVC: UIViewController {
         vwAddPropert.isHidden = sender.tag == 0
     }
 }
+
 extension AddPropertyVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
       

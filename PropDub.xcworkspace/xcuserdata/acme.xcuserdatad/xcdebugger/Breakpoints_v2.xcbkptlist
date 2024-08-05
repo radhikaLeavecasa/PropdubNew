@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0C6B33D8-F343-4006-AC19-7897D7799783"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PropDub/Module/Agent/Views/AddPropertyVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "actionProfile(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0C6B33D8-F343-4006-AC19-7897D7799783 - 975bf4ab992f7d23"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PropDub.AddPropertyVC.actionProfile(Any) -&gt; ()"
-                  moduleName = "PropDub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Agent/Views/AddPropertyVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "0C6B33D8-F343-4006-AC19-7897D7799783 - 975bf4ab992f7de1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PropDub.AddPropertyVC.actionProfile(Any) -&gt; ()"
-                  moduleName = "PropDub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Agent/Views/AddPropertyVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "132"
-                  endingLineNumber = "132"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "0C6B33D8-F343-4006-AC19-7897D7799783 - 975bf4ab992f7d23"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PropDub.AddPropertyVC.actionProfile(Any) -&gt; ()"
-                  moduleName = "PropDub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Agent/Views/AddPropertyVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -172,6 +109,21 @@
                   endingLineNumber = "67"
                   offsetFromSymbolStart = "88">
                </Location>
+               <Location
+                  uuid = "9B4AEE12-F48B-41E4-A35A-EAFF6F2EB5D1 - c6caa359ecdd188a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "112">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -235,6 +187,21 @@
                   endingLineNumber = "242"
                   offsetFromSymbolStart = "1336">
                </Location>
+               <Location
+                  uuid = "3BE6EA3F-A7DA-419D-8273-28DC1AA8DBEC - 439fae74424f608e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "242"
+                  endingLineNumber = "242"
+                  offsetFromSymbolStart = "1236">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -297,6 +264,21 @@
                   startingLineNumber = "248"
                   endingLineNumber = "248"
                   offsetFromSymbolStart = "2176">
+               </Location>
+               <Location
+                  uuid = "CBA8126D-9A67-4DA5-A775-9A3700BAAA9A - 439fae74424f61c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static PropDub.WebService.uploadImageWithURL(api: PropDub.Api, dictImage: Swift.Dictionary&lt;Swift.String, __C.UIImage&gt;, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/HelperClasses/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "2076">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -394,7 +376,38 @@
                   endingLineNumber = "71"
                   offsetFromSymbolStart = "352">
                </Location>
+               <Location
+                  uuid = "BE30636B-4438-48CD-82B6-E59B21F9A63C - c6caa359ecdd1b16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in PropDub.BecomeSuperAgentVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Authentication/Views/BecomeSuperAgentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "380">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C39B7300-A77B-4724-BA36-8B4F09134805"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PropDub/Module/Authentication/ViewModel/LoginVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "agentLoginApi(param:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
