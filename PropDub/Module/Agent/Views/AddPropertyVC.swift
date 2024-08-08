@@ -8,6 +8,12 @@
 import UIKit
 import DropDown
 
+enum CollectionViewType {
+    case category
+    case subCategory
+    case type
+}
+
 class AddPropertyVC: UIViewController {
     //MARK: - @IBOutlets
     @IBOutlet weak var lblListingHeading: UILabel!
@@ -15,11 +21,8 @@ class AddPropertyVC: UIViewController {
     @IBOutlet weak var tblVwPropertyList: UITableView!
     @IBOutlet weak var vwAddPropert: UIView!
     @IBOutlet weak var vwListing: UIView!
-    @IBOutlet weak var cnstCollVwHeightType: NSLayoutConstraint!
     @IBOutlet weak var collVwType: UICollectionView!
-    @IBOutlet weak var cnstCollVwHeightSubCat: NSLayoutConstraint!
     @IBOutlet weak var collVwSubCategory: UICollectionView!
-    @IBOutlet weak var cnstCollVwHeightCategory: NSLayoutConstraint!
     @IBOutlet weak var collVwCategory: UICollectionView!
     @IBOutlet weak var txtFldArea: UITextField!
     @IBOutlet weak var txtFldUnit: UITextField!
@@ -35,6 +38,9 @@ class AddPropertyVC: UIViewController {
     @IBOutlet var vwListingProperty: [UIView]!
     @IBOutlet var lblListingAgent: [UILabel]!
     @IBOutlet var imgVwOptions: [UIImageView]!
+    @IBOutlet weak var cnstHeightType: NSLayoutConstraint!
+    @IBOutlet weak var cnstHeightSubCat: NSLayoutConstraint!
+    @IBOutlet weak var cnstCategoryHeight: NSLayoutConstraint!
     //MARK: - Variables
     var viewModel = AddPropertyVM()
     let dropDown = DropDown()
@@ -127,6 +133,24 @@ class AddPropertyVC: UIViewController {
         }
     }
     
+    private func dataAndAction(for collectionView: UICollectionView) -> (data: [String], action: Selector)? {
+        switch collectionView {
+        case collVwCategory:
+            return (arrSelectedCat, #selector(actionCat))
+        case collVwSubCategory:
+            return (arrSelectedSubCat, #selector(actionSubCat))
+        case collVwType:
+            return (arrSelectedType, #selector(actionTypeCross))
+        default:
+            return nil
+        }
+    }
+    private func configure(cell: ContactOptionsCVC, with data: String, action: Selector,index: Int) {
+        cell.lblTitle.text = data
+        cell.btnCheck.tag = index
+        cell.btnCheck.removeTarget(nil, action: nil, for: .allEvents)
+        cell.btnCheck.addTarget(self, action: action, for: .touchUpInside)
+    }
     //MARK: - @IBActions
     @IBAction func actionDeveloper(_ sender: Any) {
         txtFldDeveloper.becomeFirstResponder()
@@ -149,6 +173,34 @@ class AddPropertyVC: UIViewController {
     }
     
     @IBAction func actionNext(_ sender: Any) {
+        if arrSelectedCat.count == 0 {
+            Proxy.shared.showSnackBar(message: "Please select category")
+        } else if arrSubCat.count == 0 {
+            Proxy.shared.showSnackBar(message: "Please select sub category")
+        } else if arrType.count == 0 {
+            Proxy.shared.showSnackBar(message: "Please select type")
+        } else if txtFldDeveloper.text?.isEmpty == true {
+            Proxy.shared.showSnackBar(message: "Please select developer")
+        } else if (txtFldTowerName.text?.isEmpty != nil) {
+            Proxy.shared.showSnackBar(message: "Please enter tower name")
+        } else if (txtFldLocation.text?.isEmpty != nil) {
+            Proxy.shared.showSnackBar(message: "Please enter location")
+        } else if (txtFldPrice.text?.isEmpty != nil) {
+            Proxy.shared.showSnackBar(message: "Please enter starting price")
+        } else if (txtFldUnit.text?.isEmpty != nil) {
+            Proxy.shared.showSnackBar(message: "Please enter unit")
+        } else if (txtFldArea.text?.isEmpty != nil) {
+            Proxy.shared.showSnackBar(message: "Please enter area/sq ft.")
+        } else {
+//            var params: [String: AnyObject] = ["name": txtFldName.text!,
+//                                               WSRequestParams.WS_REQS_PARAM_EMAIL: txtFldEmail.text!,
+//                                               WSRequestParams.WS_REQS_PARAM_MOBILE: txtFldPhone.text ?? "",
+//                                               WSRequestParams.WS_REQS_PARAM_DESCRIPTION: txtVwDescp.text ?? ""] as! [String: AnyObject]
+//            
+//            for (index, category) in arrSelectedCat.enumerated() {
+//                params["cat[\(index)]"] = category as AnyObject
+//            }
+        }
     }
     @IBAction func actionListingAddProject(_ sender: UIButton) {
         for btn in btnOptions {
@@ -156,15 +208,14 @@ class AddPropertyVC: UIViewController {
             if sender.tag == btn.tag {
                 vwListingProperty[btn.tag].backgroundColor = .black
                 lblListingAgent[btn.tag].textColor = .white
-                imgVwOptions[btn.tag].image = sender.tag == 0 ? UIImage(named: "ic_listing_selected") : UIImage(named: "ic_listing_unselected")
-                imgVwOptions[btn.tag].image = sender.tag == 1 ? UIImage(named: "ic_addProp_Selected") : UIImage(named: "ic_addprop_Unselected")
             } else {
                 vwListingProperty[btn.tag].backgroundColor = .clear
                 lblListingAgent[btn.tag].textColor = .black
-                imgVwOptions[btn.tag].image = sender.tag == 0 ? UIImage(named: "ic_listing_selected") : UIImage(named: "ic_listing_unselected")
-                imgVwOptions[btn.tag].image = sender.tag == 1 ? UIImage(named: "ic_addProp_Selected") : UIImage(named: "ic_addprop_Unselected")
             }
         }
+        
+        imgVwOptions[0].image = sender.tag == 0 ? UIImage(named: "ic_listing_selected") : UIImage(named: "ic_listing_unselected")
+        imgVwOptions[1].image = sender.tag == 0  ? UIImage(named: "ic_addprop_Unselected") : UIImage(named: "ic_addProp_Selected")
         vwListing.isHidden = sender.tag == 1
         vwAddPropert.isHidden = sender.tag == 0
     }
@@ -175,17 +226,32 @@ extension AddPropertyVC: UITextFieldDelegate {
       
         if textField == txtFldCategory {
             self.showShortDropDown(textFeild: textField, data: arrCat, dropDown: dropDown) { val, index in
-                self.arrSelectedCat.append(val)
+                if !self.arrSelectedCat.contains(val) {
+                    self.arrSelectedCat.append(val)
+                    self.cnstCategoryHeight.constant = self.arrSelectedCat.count == 0 ? 60 : 120
+                    self.collVwCategory.isHidden = false
+                    self.collVwCategory.reloadData()
+                }
             }
             return false
         } else if textField == txtFldSubCategory {
             self.showShortDropDown(textFeild: textField, data: arrSubCat, dropDown: dropDown) { val, index in
-                self.arrSelectedSubCat.append(val)
+                if !self.arrSelectedSubCat.contains(val) {
+                    self.arrSelectedSubCat.append(val)
+                    self.cnstHeightSubCat.constant = self.arrSelectedSubCat.count == 0 ? 60 : 120
+                    self.collVwSubCategory.isHidden = false
+                    self.collVwSubCategory.reloadData()
+                }
             }
             return false
         } else if textField == txtFldType {
             self.showShortDropDown(textFeild: textField, data: arrType, dropDown: dropDown) { val, index in
-                self.arrSelectedType.append(val)
+                if !self.arrSelectedType.contains(val) {
+                    self.arrSelectedType.append(val)
+                    self.cnstHeightType.constant = self.arrSelectedType.count == 0 ? 60 : 120
+                    self.collVwType.isHidden = false
+                    self.collVwType.reloadData()
+                }
             }
             return false
         } else if textField == txtFldDeveloper {
@@ -199,19 +265,17 @@ extension AddPropertyVC: UITextFieldDelegate {
     }
 }
 
-extension AddPropertyVC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension AddPropertyVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         collectionView == collVwCategory ? arrSelectedCat.count : collectionView == collVwSubCategory ? arrSelectedSubCat.count : arrSelectedType.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContactOptionsCVC", for: indexPath) as! ContactOptionsCVC
-        if collectionView == collVwCategory {
-            cell.lblTitle.text = arrSelectedSubCat[indexPath.row]
-        } else if collectionView == collVwCategory {
-            cell.lblTitle.text = arrSelectedSubCat[indexPath.row]
-        } else if collectionView == collVwCategory {
-            cell.lblTitle.text = arrSelectedType[indexPath.row]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContactOptionsCVC", for: indexPath) as? ContactOptionsCVC else {
+            fatalError("Unable to dequeue ContactOptionsCVC")
+        }
+        if let (data, action) = dataAndAction(for: collectionView) {
+            configure(cell: cell, with: data[indexPath.row], action: action, index: indexPath.row)
         }
         return cell
     }
@@ -219,15 +283,31 @@ extension AddPropertyVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let label = UILabel(frame: CGRect.zero)
-        label.text = collectionView == collVwCategory ? arrSelectedSubCat[indexPath.item] : collectionView == collVwSubCategory ? arrSelectedSubCat[indexPath.row] : arrSelectedType[indexPath.row]
+        label.text = collectionView == collVwCategory ? arrSelectedCat[indexPath.item] : collectionView == collVwSubCategory ? arrSelectedSubCat[indexPath.row] : arrSelectedType[indexPath.row]
         label.sizeToFit()
         if collectionView == collVwCategory {
-            return CGSize(width: label.frame.width+15, height: self.collVwCategory.frame.size.height)
+            return CGSize(width: label.frame.width+20, height: self.collVwCategory.frame.size.height)
         } else if collectionView == collVwSubCategory {
-            return CGSize(width: label.frame.width+15, height: self.collVwSubCategory.frame.size.height)
+            return CGSize(width: label.frame.width+20, height: self.collVwSubCategory.frame.size.height)
         } else {
-            return CGSize(width: label.frame.width+15, height: self.collVwType.frame.size.height)
+            return CGSize(width: label.frame.width+20, height: self.collVwType.frame.size.height)
         }
+    }
+    
+    @objc func actionCat(_ sender: UIButton) {
+        arrSelectedCat.remove(at: sender.tag)
+        self.cnstCategoryHeight.constant = self.arrSelectedCat.count == 0 ? 60 : 120
+        self.collVwCategory.reloadData()
+    }
+    @objc func actionSubCat(_ sender: UIButton) {
+        arrSelectedSubCat.remove(at: sender.tag)
+        self.cnstHeightSubCat.constant = self.arrSelectedSubCat.count == 0 ? 60 : 120
+        self.collVwSubCategory.reloadData()
+    }
+    @objc func actionTypeCross(_ sender: UIButton) {
+        arrSelectedType.remove(at: sender.tag)
+        self.cnstHeightType.constant = self.arrSelectedType.count == 0 ? 60 : 120
+        self.collVwType.reloadData()
     }
 }
 

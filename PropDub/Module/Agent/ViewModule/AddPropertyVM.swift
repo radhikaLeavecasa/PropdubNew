@@ -49,7 +49,7 @@ class AddPropertyVM: NSObject {
     }
     
     func typeApi(_ completion: @escaping (Bool,String) -> Void) {
-        WebService.callApi(api: .subCategory, method: .get, param: [:], header: true) { status, msg, response in
+        WebService.callApi(api: .type, method: .get, param: [:], header: true) { status, msg, response in
             if status == true {
                 if let data = response as? [String:Any] {
                     if let list = data["data"] as? [[String:Any]] {
