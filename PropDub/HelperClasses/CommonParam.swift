@@ -152,6 +152,19 @@ struct CommonMessage {
     static let ENTER_DESCRP = "Please enter description"
     static let CONTACT_MSG = "We have received your information and will be in touch with you soon. Thank you for reaching out to us."
     static let OOPS = "Oops!"
+    //Add Propery
+    static let SELECT_IMG = "Please select image"
+    static let ENTER_HANDOVER = "Please enter handover"
+    static let SELECT_GALLERY = "Please select atleast one gallery image"
+    static let SELECT_LOGO = "Please select logo"
+    static let ENTER_BROCHURE_URL = "Please enter brochure url"
+    static let ENTER_FLOOR_PLAN = "Please enter floor plan url"
+    static let ENTER_MASTER_PLAN = "Please enter master plan url"
+    static let ENTER_UNIT_PLAN = "Please enter unit plan url"
+    static let ENTER_VIDEO_URL = "Please enter video url"
+    static let ENTER_MAP_URL = "Please enter map url"
+    static let ENTER_AMENITIES = "Please enter amenities"
+    static let ENTER_NEAR_BY_LOC = "Please enter near by location"
 }
 
 

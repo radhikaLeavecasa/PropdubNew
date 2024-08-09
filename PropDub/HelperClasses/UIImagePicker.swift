@@ -67,7 +67,6 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         picker.sourceType = .photoLibrary
         self.viewController!.present(picker, animated: true, completion: nil)
     }
-
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)

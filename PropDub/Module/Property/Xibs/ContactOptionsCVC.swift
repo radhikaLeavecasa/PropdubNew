@@ -9,6 +9,7 @@ import UIKit
 
 class ContactOptionsCVC: UICollectionViewCell {
     
+    @IBOutlet weak var imgVwGallery: UIImageView!
     @IBOutlet weak var btnCheck: UIButton!
     @IBOutlet weak var vwBackground: UIView!
     @IBOutlet weak var lblTitle: UILabel!

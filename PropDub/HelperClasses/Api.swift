@@ -29,9 +29,12 @@ enum Api: Equatable {
     case category
     case subCategory
     case type
+    case addAgentProperty(Int)
    
     func rawValued() -> String {
         switch self {
+        case let .addAgentProperty(agentId):
+            return "projectapi/\(agentId)"
         case .homeApi:
             return "projectapi"
         case .developerApi:

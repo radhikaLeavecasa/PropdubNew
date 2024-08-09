@@ -28,6 +28,7 @@
 		722FAEE52BFF23210003FB07 /* DeveloperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FAEE42BFF23210003FB07 /* DeveloperVC.swift */; };
 		722FAEE92BFF52CE0003FB07 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FAEE82BFF52CE0003FB07 /* SplashVC.swift */; };
 		72351C6A2C4FDBAF0084E0F7 /* MyListingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72351C682C4FDBAF0084E0F7 /* MyListingTVC.swift */; };
+		7242A4382C6647FA00F6EEF5 /* AddPropertyTwoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242A4372C6647FA00F6EEF5 /* AddPropertyTwoVM.swift */; };
 		724A79722BF719C600941EA8 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A796E2BF719C600941EA8 /* WebServices.swift */; };
 		724A79732BF719C600941EA8 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A796F2BF719C600941EA8 /* Api.swift */; };
 		724A79742BF719C600941EA8 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A79702BF719C600941EA8 /* CommonFunctions.swift */; };
@@ -131,6 +132,7 @@
 		722FAEE42BFF23210003FB07 /* DeveloperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperVC.swift; sourceTree = "<group>"; };
 		722FAEE82BFF52CE0003FB07 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		72351C682C4FDBAF0084E0F7 /* MyListingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingTVC.swift; sourceTree = "<group>"; };
+		7242A4372C6647FA00F6EEF5 /* AddPropertyTwoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyTwoVM.swift; sourceTree = "<group>"; };
 		724A796E2BF719C600941EA8 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		724A796F2BF719C600941EA8 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		724A79702BF719C600941EA8 /* CommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				7205A4D52C369D7E00C85E58 /* AddPropertyVM.swift */,
+				7242A4372C6647FA00F6EEF5 /* AddPropertyTwoVM.swift */,
 			);
 			path = ViewModule;
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 				7205A4D62C369D7E00C85E58 /* AddPropertyVM.swift in Sources */,
 				7205A4D92C36AB2500C85E58 /* CategoryModel.swift in Sources */,
 				72E4CFC82C008B13009F7DF8 /* PropertyTVC.swift in Sources */,
+				7242A4382C6647FA00F6EEF5 /* AddPropertyTwoVM.swift in Sources */,
 				724A797B2BF722F500941EA8 /* TabbarVC.swift in Sources */,
 				72CB0D232C1088B900589618 /* OtpVC.swift in Sources */,
 				72A0D5472BFDD54B00CC7801 /* HomeTVC.swift in Sources */,

@@ -181,27 +181,39 @@ class AddPropertyVC: UIViewController {
             Proxy.shared.showSnackBar(message: "Please select type")
         } else if txtFldDeveloper.text?.isEmpty == true {
             Proxy.shared.showSnackBar(message: "Please select developer")
-        } else if (txtFldTowerName.text?.isEmpty != nil) {
+        } else if txtFldTowerName.text?.isEmpty == true {
             Proxy.shared.showSnackBar(message: "Please enter tower name")
-        } else if (txtFldLocation.text?.isEmpty != nil) {
+        } else if txtFldLocation.text?.isEmpty == true {
             Proxy.shared.showSnackBar(message: "Please enter location")
-        } else if (txtFldPrice.text?.isEmpty != nil) {
+        } else if txtFldPrice.text?.isEmpty == true {
             Proxy.shared.showSnackBar(message: "Please enter starting price")
-        } else if (txtFldUnit.text?.isEmpty != nil) {
+        } else if txtFldUnit.text?.isEmpty == true {
             Proxy.shared.showSnackBar(message: "Please enter unit")
-        } else if (txtFldArea.text?.isEmpty != nil) {
+        } else if txtFldArea.text?.isEmpty == true {
             Proxy.shared.showSnackBar(message: "Please enter area/sq ft.")
         } else {
-//            var params: [String: AnyObject] = ["name": txtFldName.text!,
-//                                               WSRequestParams.WS_REQS_PARAM_EMAIL: txtFldEmail.text!,
-//                                               WSRequestParams.WS_REQS_PARAM_MOBILE: txtFldPhone.text ?? "",
-//                                               WSRequestParams.WS_REQS_PARAM_DESCRIPTION: txtVwDescp.text ?? ""] as! [String: AnyObject]
-//            
-//            for (index, category) in arrSelectedCat.enumerated() {
-//                params["cat[\(index)]"] = category as AnyObject
-//            }
+            var params: [String: AnyObject] = ["developer": txtFldDeveloper.text!,
+                                               "name": txtFldTowerName.text!,
+                                               "location": txtFldLocation.text ?? "",
+                                               "unit": txtFldUnit.text ?? "",
+                                               "area": txtFldArea.text ?? "",
+                                               "starting_price": txtFldPrice.text ?? ""] as! [String: AnyObject]
+            
+            for (index, category) in arrSelectedCat.enumerated() {
+                params["cat[\(index)]"] = category as AnyObject
+            }
+            for (index, category) in arrSelectedSubCat.enumerated() {
+                params["sub_cat[\(index)]"] = category as AnyObject
+            }
+            for (index, category) in arrSelectedType.enumerated() {
+                params["type[\(index)]"] = category as AnyObject
+            }
+            let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyTwoVC, StoryboardName: .Agent) as! AddPropertyTwoVC
+            vc.params = params
+            self.setView(vc: vc)
         }
     }
+    
     @IBAction func actionListingAddProject(_ sender: UIButton) {
         for btn in btnOptions {
             vwListingProperty[btn.tag].backgroundColor = sender.tag == btn.tag ? .black : .clear

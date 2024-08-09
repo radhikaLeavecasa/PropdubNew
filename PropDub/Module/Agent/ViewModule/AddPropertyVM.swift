@@ -9,7 +9,7 @@ import UIKit
 import ObjectMapper
 
 class AddPropertyVM: NSObject {
-    
+    //MARK: - Variables
     var arrCategoryModel: [CategoryModel]?
     var arrSubCategoryModel: [CategoryModel]?
     var arrType: [CategoryModel]?

@@ -413,17 +413,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "43C07AC6-E699-40C6-A719-641C3D619A11"
+            uuid = "49722886-8D3C-43DD-9B18-B15126B3B16E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PropDub/Module/Agent/Views/AddPropertyVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "textFieldShouldBeginEditing(_:)"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "actionNext(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "49722886-8D3C-43DD-9B18-B15126B3B16E - 6db667fc51f4e69c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PropDub.AddPropertyVC.actionNext(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Agent/Views/AddPropertyVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "9284">
+               </Location>
+               <Location
+                  uuid = "49722886-8D3C-43DD-9B18-B15126B3B16E - 6db667fc51f4e69c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PropDub.AddPropertyVC.actionNext(Any) -&gt; ()"
+                  moduleName = "PropDub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/PropDub/PropDub/Module/Agent/Views/AddPropertyVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "9784">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

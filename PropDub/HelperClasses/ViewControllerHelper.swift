@@ -35,6 +35,7 @@ enum ViewControllerType : String{
     case BecomeAgentVC
     case BecomeSuperAgentVC
     case AlertThankyouVC
+    case AddPropertyTwoVC
     
 }
 
